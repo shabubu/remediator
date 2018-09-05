@@ -9,7 +9,8 @@
   "scripts": {
     "dev": "webpack --watch --mode=development",
     "lint": "eslint --ext .js ./src/**",
-    "test": "jest --config=.jestrc.json"
+    "test": "jest --config=.jestrc.json",
+    "test:ci": "jest --config=.jestrc.json --coverage --coverageReporters=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
     "@babel/register": "^7.0.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-loader": "^8.0.0",
+    "coveralls": "^3.0.2",
     "eslint": "^5.5.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-airbnb-base": "^13.1.0",
