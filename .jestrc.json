@@ -1,0 +1,12 @@
+{
+  "clearMocks": true,
+  "collectCoverage": true,
+  "coverageDirectory": "coverage",
+  "coverageReporters": [
+    "json",
+    "html"
+  ],
+  "testEnvironment": "node",
+  "testRegex": "(src/.*.test.js$)",
+  "verbose": true
+}

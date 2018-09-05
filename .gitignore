@@ -1,0 +1,24 @@
+# OSX
+.DS_Store*
+Icon?
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+.directory
+*~
+
+# NPM
+node_modules
+*.log
+*.gz
+
+# Distribution
+dist/
+
+# Reporting
+coverage/

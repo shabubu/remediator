@@ -1,0 +1,40 @@
+{
+  "name": "remediator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "dev": "webpack --watch --mode=development",
+    "lint": "eslint --ext .js ./src/**",
+    "test": "jest --config=.jestrc.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shabubu/remediator.git"
+  },
+  "author": "Jason Zajdel <zajdel.jason@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shabubu/remediator/issues"
+  },
+  "homepage": "https://github.com/shabubu/remediator#readme",
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-loader": "^8.0.0",
+    "eslint": "^5.5.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.0",
+    "jest": "^23.5.0",
+    "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.0"
+  }
+}
