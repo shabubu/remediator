@@ -2,5 +2,17 @@
   "env": {
     "jest": true
   },
-  "extends": "airbnb-base"
+  "extends": "airbnb-base",
+  "rules": {
+    "require-jsdoc": [
+      "error",
+      {
+        "require": {
+          "FunctionDeclaration": true,
+          "MethodDefinition": true,
+          "ClassDeclaration": true
+        }
+      }
+    ]
+  }
 }
