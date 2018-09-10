@@ -7,7 +7,7 @@ import {
   DEFAULT_FORMAT,
 } from '../../constants';
 
-describe('src/buildConfig/index integration', () => {
+describe('src/buildConfig integration tests', () => {
   test('should return config', () => {
     const options = {
       [OUTPUT_DIRECTORY_KEY]: './foo',
