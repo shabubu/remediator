@@ -6,9 +6,9 @@ import {
 } from '../constants';
 
 /**
- * Adds default config values and returns final config object for remediator.
- * @param   {object} options Options object provided to remediator library.
- * @returns {object}         Final config object.
+ * Adds default config values and returns final config object for Remediator.
+ * @param   {object} options Options object provided to Remediator library.
+ * @returns {object}         Config object with any missing keys.
  */
 export default function addDefaultValues(options) {
   return {
