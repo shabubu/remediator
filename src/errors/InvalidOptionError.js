@@ -7,7 +7,7 @@ class InvalidOptionError extends Error {
    * @param {string} optionName Name of the option
    */
   constructor(optionName) {
-    const message = `The Following options parameter is invalid: ${optionName}`;
+    const message = `The following options parameter is invalid: ${optionName}`;
     super(message);
     this.message = message;
     Error.captureStackTrace(this, InvalidOptionError);
