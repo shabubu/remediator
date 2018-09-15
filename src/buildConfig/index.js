@@ -1,13 +1,20 @@
 import checkRequired from './checkRequired';
 import addDefaultValues from './addDefaultValues';
+import validateKeysDataTypes from './validateKeysDataTypes';
+import checkDirectoriesAccess from './checkDirectoriesAccess';
 
 /**
  * Takes in library options and builds and validates final config object.
  * @param   {object} options Options object to build config object from.
- * @returns {object}
+ * @returns {object}         Final Remediator config.
  */
-export default function buildConfig(options) {
-  checkRequired(options);
+export default async function buildConfig(options) {
+  let config;
 
-  return addDefaultValues(options);
+  checkRequired(options);
+  config = addDefaultValues(options);
+  config = validateKeysDataTypes(config);
+  config = await checkDirectoriesAccess(config);
+
+  return config;
 }
