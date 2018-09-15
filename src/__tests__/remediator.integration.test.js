@@ -1,3 +1,4 @@
+import path from 'path';
 import remediator from '../index';
 import {
   OUTPUT_DIRECTORY_KEY,
@@ -9,7 +10,7 @@ import {
 } from '../constants';
 import { MissingOptionError } from '../errors';
 
-describe('src integration tests', () => {
+describe('Remediator integration tests', () => {
   test('should throw error when required options not passed in', () => {
     expect.assertions(1);
     return expect(remediator())
@@ -18,14 +19,18 @@ describe('src integration tests', () => {
   });
 
   test('should successfully execute using default config values', () => {
+    const validDirectory = '../';
     const options = {
-      [OUTPUT_DIRECTORY_KEY]: './foo',
-      [SOURCE_DIRECTORIES_KEY]: './bar',
+      [OUTPUT_DIRECTORY_KEY]: validDirectory,
+      [SOURCE_DIRECTORIES_KEY]: validDirectory,
     };
     const expected = {
-      ...options,
-      [FORMAT_KEY]: DEFAULT_FORMAT,
+      [OUTPUT_DIRECTORY_KEY]: path.resolve(validDirectory),
+      [SOURCE_DIRECTORIES_KEY]: [
+        path.resolve(validDirectory),
+      ],
       [RECURSIVE_KEY]: DEFAULT_RECURSIVE,
+      [FORMAT_KEY]: DEFAULT_FORMAT,
     };
 
     expect.assertions(1);
