@@ -2,8 +2,10 @@ import fs from 'fs';
 
 /**
  * Checks if a path is writable.
- * @param {string} path    Directory or file path.
- * @returns {Promise<any>} Resolves if true, rejects fs error if unable to access with write.
+ * @param    {string}  path Directory or file path.
+ * @returns  {Promise}
+ * @resolves {bool}         Resolves
+ * @rejects  {Error}        Error from filesystem access attempt
  */
 export default function pathHasReadWrite(path) {
   return new Promise((resolve, reject) => {
