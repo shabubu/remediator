@@ -6,9 +6,9 @@ import {
   OUTPUT_DIRECTORY_KEY,
   RECURSIVE_KEY,
   SOURCE_DIRECTORIES_KEY,
-} from '../../constants';
+} from '../../../constants';
 
-describe('src/buildConfig/addDefaultValues', () => {
+describe('src/lib/buildConfig/addDefaultValues', () => {
   test('should add missing default keys and values', () => {
     const options = {
       [OUTPUT_DIRECTORY_KEY]: './foo',

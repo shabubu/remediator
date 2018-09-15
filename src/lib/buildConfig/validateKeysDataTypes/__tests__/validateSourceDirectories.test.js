@@ -1,9 +1,9 @@
 import path from 'path';
-import { SOURCE_DIRECTORIES_KEY } from '../../../constants';
+import { SOURCE_DIRECTORIES_KEY } from '../../../../constants';
 import validateSourceDirectories from '../validateSourceDirectories';
-import { InvalidOptionError } from '../../../errors';
+import { InvalidOptionError } from '../../../../errors';
 
-describe('src/buildConfig/validateKeysDataTypes/validateSourceDirectories', () => {
+describe('src/lib/buildConfig/validateKeysDataTypes/validateSourceDirectories', () => {
   test('should return updated config if source directory string is valid', () => {
     const validDirectory = '../';
     const config = {

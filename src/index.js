@@ -1,4 +1,4 @@
-import buildConfig from './buildConfig';
+import buildConfig from './lib/buildConfig';
 
 /**
  * Reorganizes media files based off meta data.

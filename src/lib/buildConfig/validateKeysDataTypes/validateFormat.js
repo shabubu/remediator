@@ -1,5 +1,5 @@
-import { FORMAT_KEY } from '../../constants';
-import { InvalidOptionError } from '../../errors';
+import { FORMAT_KEY } from '../../../constants';
+import { InvalidOptionError } from '../../../errors';
 
 /**
  * Validates the format is proper data type and not empty.

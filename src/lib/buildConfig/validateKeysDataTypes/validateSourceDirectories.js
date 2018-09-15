@@ -1,6 +1,6 @@
 import path from 'path';
-import { SOURCE_DIRECTORIES_KEY } from '../../constants';
-import { InvalidOptionError } from '../../errors';
+import { SOURCE_DIRECTORIES_KEY } from '../../../constants';
+import { InvalidOptionError } from '../../../errors';
 
 /**
  * Validates data types for sources and checks .

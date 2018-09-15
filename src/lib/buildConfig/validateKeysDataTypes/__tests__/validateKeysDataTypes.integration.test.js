@@ -6,10 +6,10 @@ import {
   OUTPUT_DIRECTORY_KEY,
   RECURSIVE_KEY,
   SOURCE_DIRECTORIES_KEY,
-} from '../../../constants';
+} from '../../../../constants';
 import validateKeysDataTypes from '../index';
 
-describe('src/buildConfig/validateKeysDataTypes integration tests', () => {
+describe('src/lib/buildConfig/validateKeysDataTypes integration tests', () => {
   test('should validate and return validated and updated config object', () => {
     const validDirectory = '../';
     const config = {

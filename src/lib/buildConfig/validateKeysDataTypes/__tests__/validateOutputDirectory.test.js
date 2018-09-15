@@ -1,9 +1,9 @@
 import path from 'path';
-import { OUTPUT_DIRECTORY_KEY } from '../../../constants';
+import { OUTPUT_DIRECTORY_KEY } from '../../../../constants';
 import validateOutputDirectory from '../validateOutputDirectory';
-import { InvalidOptionError } from '../../../errors';
+import { InvalidOptionError } from '../../../../errors';
 
-describe('src/buildConfig/validateKeysDataTypes/validateOutputDirectory', () => {
+describe('src/lib/buildConfig/validateKeysDataTypes/validateOutputDirectory', () => {
   test('should return updated config if output directory is valid', () => {
     const validDirectory = '../';
     const config = {

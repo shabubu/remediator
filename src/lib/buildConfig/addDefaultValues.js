@@ -3,7 +3,7 @@ import {
   DEFAULT_FORMAT,
   DEFAULT_RECURSIVE,
   RECURSIVE_KEY,
-} from '../constants';
+} from '../../constants';
 
 /**
  * Adds default config values and returns final config object for Remediator.

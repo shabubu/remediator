@@ -2,10 +2,10 @@ import checkRequired from '../checkRequired';
 import {
   OUTPUT_DIRECTORY_KEY,
   SOURCE_DIRECTORIES_KEY,
-} from '../../constants';
-import { MissingOptionError } from '../../errors';
+} from '../../../constants';
+import { MissingOptionError } from '../../../errors';
 
-describe('src/buildConfig/checkRequired', () => {
+describe('src/lib/buildConfig/checkRequired', () => {
   test('should throw error when a required option is missing', () => {
     const options = {};
 

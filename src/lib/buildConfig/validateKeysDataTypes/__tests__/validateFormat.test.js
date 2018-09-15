@@ -1,8 +1,8 @@
-import { FORMAT_KEY } from '../../../constants';
-import { InvalidOptionError } from '../../../errors';
+import { FORMAT_KEY } from '../../../../constants';
+import { InvalidOptionError } from '../../../../errors';
 import validateFormat from '../validateFormat';
 
-describe('src/buildConfig/validateKeysDataTypes/validateFormat', () => {
+describe('src/lib/buildConfig/validateKeysDataTypes/validateFormat', () => {
   test('should return config when format is a populated string', () => {
     const config = {
       [FORMAT_KEY]: ':Month:',

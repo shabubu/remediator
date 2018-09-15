@@ -6,9 +6,9 @@ import {
   RECURSIVE_KEY,
   FORMAT_KEY,
   DEFAULT_FORMAT, DEFAULT_RECURSIVE,
-} from '../../constants';
+} from '../../../constants';
 
-describe('src/buildConfig integration tests', () => {
+describe('src/lib/buildConfig integration tests', () => {
   test('should return valid config with all parameters', () => {
     const validDirectory = '../';
     const options = {
