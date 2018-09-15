@@ -1,2 +1,2 @@
 export { default as pathIsAccessible } from './pathIsAccessible';
-export { default as pathIsWritable } from './pathIsWritable';
+export { default as pathHasReadWrite } from './pathHasReadWrite';

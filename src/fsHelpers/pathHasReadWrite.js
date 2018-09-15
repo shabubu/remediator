@@ -5,11 +5,12 @@ import fs from 'fs';
  * @param {string} path    Directory or file path.
  * @returns {Promise<any>} Resolves if true, rejects fs error if unable to access with write.
  */
-export default function pathIsWritable(path) {
+export default function pathHasReadWrite(path) {
   return new Promise((resolve, reject) => {
     fs.access(
       path,
-      fs.constants.W_OK,
+      // eslint-disable-next-line no-bitwise
+      fs.constants.F_OK | fs.constants.R_OK | fs.constants.W_OK,
       (error) => {
         if (error) {
           reject(error);
