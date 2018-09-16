@@ -54,3 +54,21 @@ export const RECURSIVE_KEY = 'recursive';
  * @type {string}
  */
 export const SOURCE_DIRECTORIES_KEY = 'source';
+
+/**
+ * Config object key for transformer action objects.
+ * @type {string}
+ */
+export const TRANSFORMER_ACTIONS_KEY = 'transformerActions';
+
+/**
+ * Config transformer action object key for transformer string replacement.
+ * @type {string}
+ */
+export const TRANSFORMER_REPLACE_STRING_KEY = 'replaceString';
+
+/**
+ * Config transformer action object key for transformer name.
+ * @type {string}
+ */
+export const TRANSFORMER_NAME_KEY = 'name';
