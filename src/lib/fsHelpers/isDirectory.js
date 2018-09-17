@@ -13,10 +13,10 @@ export default async function isDirectory(path) {
       path,
       (err, stats) => {
         if (err) {
-          reject(err);
+          return reject(err);
         }
 
-        resolve(!!stats && stats.isDirectory());
+        return resolve(!!stats && stats.isDirectory());
       },
     );
   });
