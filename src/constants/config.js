@@ -38,6 +38,30 @@ export const DEFAULT_RECURSIVE = false;
 export const FORMAT_KEY = 'format';
 
 /**
+ * Mode to copy files.
+ * @type {string}
+ */
+export const MODE_COPY = 'copy';
+
+/**
+ * Mode to not copy or move, but return what changes would be made.
+ * @type {string}
+ */
+export const MODE_DRY = 'dry';
+
+/**
+ * Config object key for file mode.
+ * @type {string}
+ */
+export const MODE_KEY = 'mode';
+
+/**
+ * Mode to move files.
+ * @type {string}
+ */
+export const MODE_MOVE = 'move';
+
+/**
  * Config object key for output directory.
  * @type {string}
  */
@@ -62,13 +86,13 @@ export const SOURCE_DIRECTORIES_KEY = 'source';
 export const TRANSFORMER_ACTIONS_KEY = 'transformerActions';
 
 /**
- * Config transformer action object key for transformer string replacement.
- * @type {string}
- */
-export const TRANSFORMER_REPLACE_STRING_KEY = 'replaceString';
-
-/**
  * Config transformer action object key for transformer name.
  * @type {string}
  */
 export const TRANSFORMER_NAME_KEY = 'name';
+
+/**
+ * Config transformer action object key for transformer string replacement.
+ * @type {string}
+ */
+export const TRANSFORMER_REPLACE_STRING_KEY = 'replaceString';

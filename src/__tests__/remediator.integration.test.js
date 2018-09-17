@@ -9,6 +9,8 @@ import {
   TRANSFORMER_ACTIONS_KEY,
   TRANSFORMER_NAME_KEY,
   TRANSFORMER_REPLACE_STRING_KEY,
+  MODE_KEY,
+  MODE_COPY,
 } from '../constants';
 import { MissingOptionError } from '../errors';
 
@@ -34,6 +36,7 @@ describe('Remediator integration tests', () => {
         path.resolve(validDirectory),
       ],
       [RECURSIVE_KEY]: DEFAULT_RECURSIVE,
+      [MODE_KEY]: MODE_COPY,
       [TRANSFORMER_ACTIONS_KEY]: [
         {
           [TRANSFORMER_NAME_KEY]: 'Day',

@@ -3,6 +3,8 @@ import {
   DEFAULT_FORMAT,
   DEFAULT_RECURSIVE,
   RECURSIVE_KEY,
+  MODE_KEY,
+  MODE_COPY,
 } from '../../constants';
 
 /**
@@ -14,6 +16,7 @@ export default function addDefaultValues(options) {
   return {
     [FORMAT_KEY]: DEFAULT_FORMAT,
     [RECURSIVE_KEY]: DEFAULT_RECURSIVE,
+    [MODE_KEY]: MODE_COPY,
     ...options,
   };
 }

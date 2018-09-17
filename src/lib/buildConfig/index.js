@@ -3,6 +3,7 @@ import addDefaultValues from './addDefaultValues';
 import validateKeysDataTypes from './validateKeysDataTypes';
 import checkDirectoriesAccess from './checkDirectoriesAccess';
 import checkFormatSyntax from './checkFormatSyntax';
+import checkModeValue from './checkModeValue';
 
 /**
  * Takes in library options and builds and validates final config object.
@@ -16,6 +17,7 @@ export default async function buildConfig(options) {
   config = addDefaultValues(options);
   config = validateKeysDataTypes(config);
   config = checkFormatSyntax(config);
+  config = checkModeValue(config);
   config = await checkDirectoriesAccess(config);
 
   return config;

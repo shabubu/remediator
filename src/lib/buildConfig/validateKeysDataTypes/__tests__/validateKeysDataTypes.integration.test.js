@@ -3,6 +3,8 @@ import {
   DEFAULT_FORMAT,
   DEFAULT_RECURSIVE,
   FORMAT_KEY,
+  MODE_COPY,
+  MODE_KEY,
   OUTPUT_DIRECTORY_KEY,
   RECURSIVE_KEY,
   SOURCE_DIRECTORIES_KEY,
@@ -17,6 +19,7 @@ describe('src/lib/buildConfig/validateKeysDataTypes integration tests', () => {
       [OUTPUT_DIRECTORY_KEY]: validDirectory,
       [RECURSIVE_KEY]: DEFAULT_RECURSIVE,
       [SOURCE_DIRECTORIES_KEY]: validDirectory,
+      [MODE_KEY]: MODE_COPY,
     };
     const expected = {
       ...config,

@@ -6,6 +6,9 @@ import {
   OUTPUT_DIRECTORY_KEY,
   RECURSIVE_KEY,
   SOURCE_DIRECTORIES_KEY,
+  MODE_KEY,
+  MODE_COPY,
+  MODE_DRY,
 } from '../../../constants';
 
 describe('src/lib/buildConfig/addDefaultValues', () => {
@@ -18,6 +21,7 @@ describe('src/lib/buildConfig/addDefaultValues', () => {
       ...options,
       [FORMAT_KEY]: DEFAULT_FORMAT,
       [RECURSIVE_KEY]: DEFAULT_RECURSIVE,
+      [MODE_KEY]: MODE_COPY,
     };
     const result = addDefaultValues(options);
 
@@ -31,6 +35,7 @@ describe('src/lib/buildConfig/addDefaultValues', () => {
       [SOURCE_DIRECTORIES_KEY]: ['./bar'],
       [FORMAT_KEY]: ':YYYY:',
       [RECURSIVE_KEY]: true,
+      [MODE_KEY]: MODE_DRY,
     };
     const result = addDefaultValues(options);
 
