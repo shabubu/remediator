@@ -1,4 +1,16 @@
 {
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "src": "./src",
+          "testAssets": "./testAssets"
+        }
+      }
+    ]
+  ],
+
   "presets": [
     "@babel/preset-env"
   ]

@@ -20,4 +20,12 @@ export default {
     filename: 'remediator.js',
     library: 'remediator',
   },
+
+  resolve: {
+    alias: {
+      src: path.resolve(__dirname, './src'),
+    },
+  },
+
+  target: 'node',
 };
