@@ -1,9 +1,9 @@
-import checkRequired from './checkRequired';
-import addDefaultValues from './addDefaultValues';
-import validateKeysDataTypes from './validateKeysDataTypes';
-import checkDirectoriesAccess from './checkDirectoriesAccess';
-import checkFormatSyntax from './checkFormatSyntax';
-import checkModeValue from './checkModeValue';
+import checkRequired from 'src/lib/buildConfig/checkRequired';
+import addDefaultValues from 'src/lib/buildConfig/addDefaultValues';
+import validateKeysDataTypes from 'src/lib/buildConfig/validateKeysDataTypes';
+import checkDirectoriesAccess from 'src/lib/buildConfig/checkDirectoriesAccess';
+import checkFormatSyntax from 'src/lib/buildConfig/checkFormatSyntax';
+import checkModeValue from 'src/lib/buildConfig/checkModeValue';
 
 /**
  * Takes in library options and builds and validates final config object.

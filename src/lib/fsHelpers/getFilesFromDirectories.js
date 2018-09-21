@@ -1,4 +1,4 @@
-import getFilesFromDirectory from './getFilesFromDirectory';
+import getFilesFromDirectory from 'src/lib/fsHelpers/getFilesFromDirectory';
 
 /**
  * Gets all files in all directories

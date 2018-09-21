@@ -1,5 +1,5 @@
 import path from 'path';
-import getFilesFromDirectory from '../getFilesFromDirectory';
+import getFilesFromDirectory from 'src/lib/fsHelpers/getFilesFromDirectory';
 
 const baseDir = './testAssets';
 const errPath = path.resolve(baseDir, 'foo');

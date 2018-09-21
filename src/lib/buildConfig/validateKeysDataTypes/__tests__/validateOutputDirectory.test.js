@@ -1,7 +1,7 @@
 import path from 'path';
-import { OUTPUT_DIRECTORY_KEY } from '../../../../constants';
-import validateOutputDirectory from '../validateOutputDirectory';
-import { InvalidOptionError } from '../../../../errors';
+import { OUTPUT_DIRECTORY_KEY } from 'src/constants';
+import validateOutputDirectory from 'src/lib/buildConfig/validateKeysDataTypes/validateOutputDirectory';
+import { InvalidOptionError } from 'src/errors';
 
 describe('src/lib/buildConfig/validateKeysDataTypes/validateOutputDirectory', () => {
   test('should return updated config if output directory is valid', () => {

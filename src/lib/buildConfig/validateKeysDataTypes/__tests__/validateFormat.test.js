@@ -1,6 +1,6 @@
-import { FORMAT_KEY } from '../../../../constants';
-import { InvalidOptionError } from '../../../../errors';
-import validateFormat from '../validateFormat';
+import { FORMAT_KEY } from 'src/constants';
+import { InvalidOptionError } from 'src/errors';
+import validateFormat from 'src/lib/buildConfig/validateKeysDataTypes/validateFormat';
 
 describe('src/lib/buildConfig/validateKeysDataTypes/validateFormat', () => {
   test('should return config when format is a populated string', () => {

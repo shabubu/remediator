@@ -1,5 +1,5 @@
 import path from 'path';
-import remediator from '../index';
+import remediator from 'src';
 import {
   OUTPUT_DIRECTORY_KEY,
   SOURCE_DIRECTORIES_KEY,
@@ -11,8 +11,8 @@ import {
   TRANSFORMER_REPLACE_STRING_KEY,
   MODE_KEY,
   MODE_COPY,
-} from '../constants';
-import { MissingOptionError } from '../errors';
+} from 'src/constants';
+import { MissingOptionError } from 'src/errors';
 
 describe('Remediator integration tests', () => {
   test('should throw error when required options not passed in', () => {

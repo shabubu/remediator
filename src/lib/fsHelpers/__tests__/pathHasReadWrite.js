@@ -1,5 +1,5 @@
 import path from 'path';
-import pathHasReadWrite from '../pathHasReadWrite';
+import pathHasReadWrite from 'src/lib/fsHelpers/pathHasReadWrite';
 
 const writablePath = path.resolve(__dirname, '..');
 const absentPath = path.join(writablePath, 'foo');

@@ -1,4 +1,4 @@
-import removeArrayDuplicates from '../removeArrayDuplicates';
+import removeArrayDuplicates from 'src/lib/util/removeArrayDuplicates';
 
 describe('src/lib/util/removeArrayDuplicates', () => {
   test('should return array without duplicates', () => {

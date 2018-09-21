@@ -1,9 +1,9 @@
-import { pathHasReadWrite } from '../fsHelpers';
-import { InAccessiblePathError } from '../../errors';
+import { pathHasReadWrite } from 'src/lib/fsHelpers';
+import { InAccessiblePathError } from 'src/errors';
 import {
   OUTPUT_DIRECTORY_KEY,
   SOURCE_DIRECTORIES_KEY,
-} from '../../constants';
+} from 'src/constants';
 
 /**
  * Checks that output and source directories have r+w access.

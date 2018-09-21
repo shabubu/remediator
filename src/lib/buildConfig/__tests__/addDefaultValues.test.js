@@ -1,4 +1,4 @@
-import addDefaultValues from '../addDefaultValues';
+import addDefaultValues from 'src/lib/buildConfig/addDefaultValues';
 import {
   FORMAT_KEY,
   DEFAULT_FORMAT,
@@ -9,7 +9,7 @@ import {
   MODE_KEY,
   MODE_COPY,
   MODE_DRY,
-} from '../../../constants';
+} from 'src/constants';
 
 describe('src/lib/buildConfig/addDefaultValues', () => {
   test('should add missing default keys and values', () => {

@@ -1,6 +1,6 @@
-import { RECURSIVE_KEY } from '../../../../constants';
-import validateRecursive from '../validateRecursive';
-import { InvalidOptionError } from '../../../../errors';
+import { RECURSIVE_KEY } from 'src/constants';
+import validateRecursive from 'src/lib/buildConfig/validateKeysDataTypes/validateRecursive';
+import { InvalidOptionError } from 'src/errors';
 
 describe('src/lib/validateConfig/validateRecursive', () => {
   test('should return config if type is boolean', () => {

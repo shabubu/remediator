@@ -1,5 +1,5 @@
 import path from 'path';
-import getFilesFromDirectories from '../getFilesFromDirectories';
+import getFilesFromDirectories from 'src/lib/fsHelpers/getFilesFromDirectories';
 
 const baseDir = './testAssets';
 const subDir1 = path.resolve(baseDir, 'subDir');

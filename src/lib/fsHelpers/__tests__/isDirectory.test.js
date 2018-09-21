@@ -1,5 +1,5 @@
 import path from 'path';
-import isDirectory from '../isDirectory';
+import isDirectory from 'src/lib/fsHelpers/isDirectory';
 
 const basePath = './testAssets';
 const filePath = path.resolve(basePath, '1.jpg');

@@ -1,8 +1,8 @@
 import {
   OUTPUT_DIRECTORY_KEY,
   SOURCE_DIRECTORIES_KEY,
-} from '../../constants';
-import { MissingOptionError } from '../../errors';
+} from 'src/constants';
+import { MissingOptionError } from 'src/errors';
 
 /**
  * Required keys in options

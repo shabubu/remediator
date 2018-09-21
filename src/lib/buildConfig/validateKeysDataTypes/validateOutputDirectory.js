@@ -1,6 +1,6 @@
 import path from 'path';
-import { OUTPUT_DIRECTORY_KEY } from '../../../constants';
-import { InvalidOptionError } from '../../../errors';
+import { OUTPUT_DIRECTORY_KEY } from 'src/constants';
+import { InvalidOptionError } from 'src/errors';
 
 /**
  * Validates the output directory is proper data type and not empty.

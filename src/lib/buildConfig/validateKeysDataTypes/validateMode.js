@@ -1,5 +1,5 @@
-import { MODE_KEY } from '../../../constants';
-import { InvalidOptionError } from '../../../errors';
+import { MODE_KEY } from 'src/constants';
+import { InvalidOptionError } from 'src/errors';
 
 /**
  * Validates the mode is proper data type and not empty.

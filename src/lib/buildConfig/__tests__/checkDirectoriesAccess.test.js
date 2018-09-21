@@ -2,9 +2,9 @@ import path from 'path';
 import {
   OUTPUT_DIRECTORY_KEY,
   SOURCE_DIRECTORIES_KEY,
-} from '../../../constants';
-import { InAccessiblePathError } from '../../../errors';
-import checkDirectoriesAccess from '../checkDirectoriesAccess';
+} from 'src/constants';
+import { InAccessiblePathError } from 'src/errors';
+import checkDirectoriesAccess from 'src/lib/buildConfig/checkDirectoriesAccess';
 
 const accessibleDir = path.resolve('../');
 const inaccessibleDir = path.resolve('./foo');

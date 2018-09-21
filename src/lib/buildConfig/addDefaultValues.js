@@ -5,7 +5,7 @@ import {
   RECURSIVE_KEY,
   MODE_KEY,
   MODE_COPY,
-} from '../../constants';
+} from 'src/constants';
 
 /**
  * Adds default config values and returns final config object for Remediator.

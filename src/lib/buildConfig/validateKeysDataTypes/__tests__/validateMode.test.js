@@ -1,6 +1,6 @@
-import { MODE_KEY } from '../../../../constants';
-import { InvalidOptionError } from '../../../../errors';
-import validateMode from '../validateMode';
+import { MODE_KEY } from 'src/constants';
+import { InvalidOptionError } from 'src/errors';
+import validateMode from 'src/lib/buildConfig/validateKeysDataTypes/validateMode';
 
 describe('src/lib/buildConfig/validateKeysDataTypes/validateMode', () => {
   test('should return config when mode is a populated string', () => {

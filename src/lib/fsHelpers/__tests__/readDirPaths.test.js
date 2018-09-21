@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import readDirPaths from '../readDirPaths';
+import readDirPaths from 'src/lib/fsHelpers/readDirPaths';
 
 const baseDir = path.resolve('./testAssets');
 let files;

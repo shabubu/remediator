@@ -1,8 +1,8 @@
-import validateRecursive from './validateRecursive';
-import validateOutputDirectory from './validateOutputDirectory';
-import validateSourceDirectories from './validateSourceDirectories';
-import validateFormat from './validateFormat';
-import validateMode from './validateMode';
+import validateRecursive from 'src/lib/buildConfig/validateKeysDataTypes/validateRecursive';
+import validateOutputDirectory from 'src/lib/buildConfig/validateKeysDataTypes/validateOutputDirectory';
+import validateSourceDirectories from 'src/lib/buildConfig/validateKeysDataTypes/validateSourceDirectories';
+import validateFormat from 'src/lib/buildConfig/validateKeysDataTypes/validateFormat';
+import validateMode from 'src/lib/buildConfig/validateKeysDataTypes/validateMode';
 
 /**
  * Validates data types for all keys in Remediator config object.

@@ -3,9 +3,9 @@ import {
   MODE_DRY,
   MODE_KEY,
   MODE_MOVE,
-} from '../../../constants';
-import checkModeValue from '../checkModeValue';
-import { InvalidModeError } from '../../../errors';
+} from 'src/constants';
+import checkModeValue from 'src/lib/buildConfig/checkModeValue';
+import { InvalidModeError } from 'src/errors';
 
 describe('src/lib/buildConfig/checkModeValue', () => {
   test('should return config with copy mode', () => {

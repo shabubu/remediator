@@ -3,12 +3,12 @@ import {
   TRANSFORMER_ACTIONS_KEY,
   TRANSFORMER_NAME_KEY,
   TRANSFORMER_REPLACE_STRING_KEY,
-} from '../../../constants';
-import checkFormatSyntax from '../checkFormatSyntax';
+} from 'src/constants';
+import checkFormatSyntax from 'src/lib/buildConfig/checkFormatSyntax';
 import {
   MissingFormatSeparatorError,
   TransformerMissingError,
-} from '../../../errors';
+} from 'src/errors';
 
 describe('src/lib/buildConfig/checkFormatSyntax', () => {
   test('should return config object when format is valid', () => {

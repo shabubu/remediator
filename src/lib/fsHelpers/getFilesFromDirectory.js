@@ -1,6 +1,6 @@
 import path from 'path';
-import readDirPaths from './readDirPaths';
-import isDirectory from './isDirectory';
+import readDirPaths from 'src/lib/fsHelpers/readDirPaths';
+import isDirectory from 'src/lib/fsHelpers/isDirectory';
 
 /**
  * Gets all files with full paths from a directory without any directories.

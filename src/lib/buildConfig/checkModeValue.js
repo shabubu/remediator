@@ -3,8 +3,8 @@ import {
   MODE_DRY,
   MODE_KEY,
   MODE_MOVE,
-} from '../../constants';
-import { InvalidModeError } from '../../errors';
+} from 'src/constants';
+import { InvalidModeError } from 'src/errors';
 
 /**
  * Checks for valid mode in Remediator config.

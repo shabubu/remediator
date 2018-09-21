@@ -1,4 +1,4 @@
-import { FORMAT_SEPARATOR } from '../constants';
+import { FORMAT_SEPARATOR } from 'src/constants';
 
 /**
  * Error for missing transformer separator in format for remediator library.

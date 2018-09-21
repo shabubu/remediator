@@ -5,11 +5,11 @@ import {
   TRANSFORMER_ACTIONS_KEY,
   TRANSFORMER_NAME_KEY,
   TRANSFORMER_REPLACE_STRING_KEY,
-} from '../../constants';
+} from 'src/constants';
 import {
   MissingFormatSeparatorError,
   TransformerMissingError,
-} from '../../errors';
+} from 'src/errors';
 
 // we sort the transformers so longer names are tried first
 const SORTED_TRANSFORMERS = ALL_TRANSFORMERS.sort((a, b) => b.length - a.length);

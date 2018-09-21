@@ -8,8 +8,8 @@ import {
   OUTPUT_DIRECTORY_KEY,
   RECURSIVE_KEY,
   SOURCE_DIRECTORIES_KEY,
-} from '../../../../constants';
-import validateKeysDataTypes from '../index';
+} from 'src/constants';
+import validateKeysDataTypes from 'src/lib/buildConfig/validateKeysDataTypes';
 
 describe('src/lib/buildConfig/validateKeysDataTypes integration tests', () => {
   test('should validate and return validated and updated config object', () => {

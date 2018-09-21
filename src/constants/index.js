@@ -1,2 +1,2 @@
-export * from './config';
-export * from './transformers';
+export * from 'src/constants/config';
+export * from 'src/constants/transformers';

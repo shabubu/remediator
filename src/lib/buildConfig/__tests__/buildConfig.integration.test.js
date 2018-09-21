@@ -1,5 +1,5 @@
 import path from 'path';
-import buildConfig from '../index';
+import buildConfig from 'src/lib/buildConfig';
 import {
   OUTPUT_DIRECTORY_KEY,
   SOURCE_DIRECTORIES_KEY,
@@ -11,7 +11,7 @@ import {
   TRANSFORMER_REPLACE_STRING_KEY,
   MODE_KEY,
   MODE_COPY,
-} from '../../../constants';
+} from 'src/constants';
 
 describe('src/lib/buildConfig integration tests', () => {
   test('should return valid config with all parameters', () => {

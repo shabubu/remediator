@@ -1,7 +1,7 @@
 import path from 'path';
-import { SOURCE_DIRECTORIES_KEY } from '../../../../constants';
-import validateSourceDirectories from '../validateSourceDirectories';
-import { InvalidOptionError } from '../../../../errors';
+import { SOURCE_DIRECTORIES_KEY } from 'src/constants';
+import validateSourceDirectories from 'src/lib/buildConfig/validateKeysDataTypes/validateSourceDirectories';
+import { InvalidOptionError } from 'src/errors';
 
 describe('src/lib/buildConfig/validateKeysDataTypes/validateSourceDirectories', () => {
   test('should return updated config if source directory string is valid', () => {

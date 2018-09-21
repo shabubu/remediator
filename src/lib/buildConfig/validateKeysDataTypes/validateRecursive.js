@@ -1,5 +1,5 @@
-import { RECURSIVE_KEY } from '../../../constants';
-import { InvalidOptionError } from '../../../errors';
+import { RECURSIVE_KEY } from 'src/constants';
+import { InvalidOptionError } from 'src/errors';
 
 /**
  * Validates recursive is proper data type.

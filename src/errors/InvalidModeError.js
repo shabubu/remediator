@@ -2,7 +2,7 @@ import {
   MODE_COPY,
   MODE_DRY,
   MODE_MOVE,
-} from '../constants';
+} from 'src/constants';
 
 /**
  * Error if mode in config is not supported.
