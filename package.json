@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "dev": "webpack --watch --mode=development",
+    "build": "webpack --mode=production",
     "lint": "eslint --ext .js ./src/**",
     "test": "jest --config=.jestrc.json",
     "test:ci": "jest --config=.jestrc.json --coverage --coverageReporters=text-lcov | coveralls"
