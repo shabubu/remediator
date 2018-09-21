@@ -7,6 +7,7 @@ const image1 = path.resolve(baseDir, '1.jpg');
 const image2 = path.resolve(baseDir, '2.jpg');
 const image3 = path.resolve(baseDir, 'subDir/3.jpg');
 const image4 = path.resolve(baseDir, 'subDir2/4.jpg');
+const image6 = path.resolve(baseDir, 'subDir/anotherSubDir/6.jpg');
 
 describe('src/lib/fsHelpers/getFilesFromDirectory', () => {
   test('should resolve files in directory but not subdirectories', () => {
@@ -28,6 +29,7 @@ describe('src/lib/fsHelpers/getFilesFromDirectory', () => {
       image2,
       image3,
       image4,
+      image6,
     ];
     const result = getFilesFromDirectory(baseDir, recursive);
 
