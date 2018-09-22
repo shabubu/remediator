@@ -4,3 +4,4 @@ export { default as InAccessiblePathError } from 'src/errors/InAccessiblePathErr
 export { default as MissingFormatSeparatorError } from 'src/errors/MissingFormatSeparatorError';
 export { default as TransformerMissingError } from 'src/errors/TransformerMissingError';
 export { default as InvalidModeError } from 'src/errors/InvalidModeError';
+export { default as InvalidBatchSizeError } from 'src/errors/InvalidBatchSizeError';

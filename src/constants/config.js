@@ -13,10 +13,22 @@ import {
 const { sep } = path;
 
 /**
+ * Config object key for amount of files to process at a time.
+ * @type {string}
+ */
+export const BATCH_SIZE_KEY = 'batchSize';
+
+/**
  * Markup separator for format string to add transformers between.
  * @type {string}
  */
 export const FORMAT_SEPARATOR = ':';
+
+/**
+ * Default value for BATCH_SIZE_KEY if not provided as an option.
+ * @type {number}
+ */
+export const DEFAULT_BATCH_SIZE = 20;
 
 /**
  * Default value for FORMAT_KEY if not provided as an option.
