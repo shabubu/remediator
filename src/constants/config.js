@@ -44,6 +44,12 @@ export const DEFAULT_FORMAT = `${FORMAT_SEPARATOR}${NUMERIC_YEAR}${FORMAT_SEPARA
 export const DEFAULT_RECURSIVE = false;
 
 /**
+ * Default value for SKIP_ERRORS_KEY if not provided as an option.
+ * @type {boolean}
+ */
+export const DEFAULT_SKIP_ERRORS = false;
+
+/**
  * Config object key for filename format template.
  * @type {string}
  */
@@ -84,6 +90,12 @@ export const OUTPUT_DIRECTORY_KEY = 'output';
  * @type {string}
  */
 export const RECURSIVE_KEY = 'recursive';
+
+/**
+ * Config object key for skipping errors while processing files.
+ * @type {string}
+ */
+export const SKIP_ERRORS_KEY = 'skipErrors';
 
 /**
  * Config object key for source directories.

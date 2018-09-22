@@ -13,6 +13,8 @@ import {
   MODE_COPY,
   BATCH_SIZE_KEY,
   DEFAULT_BATCH_SIZE,
+  SKIP_ERRORS_KEY,
+  DEFAULT_SKIP_ERRORS,
 } from 'src/constants';
 
 describe('src/lib/buildConfig integration tests', () => {
@@ -32,6 +34,7 @@ describe('src/lib/buildConfig integration tests', () => {
       [RECURSIVE_KEY]: DEFAULT_RECURSIVE,
       [MODE_KEY]: MODE_COPY,
       [BATCH_SIZE_KEY]: DEFAULT_BATCH_SIZE,
+      [SKIP_ERRORS_KEY]: DEFAULT_SKIP_ERRORS,
       [TRANSFORMER_ACTIONS_KEY]: [
         {
           [TRANSFORMER_NAME_KEY]: 'Day',

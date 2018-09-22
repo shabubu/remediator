@@ -11,6 +11,8 @@ import {
   MODE_DRY,
   BATCH_SIZE_KEY,
   DEFAULT_BATCH_SIZE,
+  SKIP_ERRORS_KEY,
+  DEFAULT_SKIP_ERRORS,
 } from 'src/constants';
 
 describe('src/lib/buildConfig/addDefaultValues', () => {
@@ -25,6 +27,7 @@ describe('src/lib/buildConfig/addDefaultValues', () => {
       [RECURSIVE_KEY]: DEFAULT_RECURSIVE,
       [MODE_KEY]: MODE_COPY,
       [BATCH_SIZE_KEY]: DEFAULT_BATCH_SIZE,
+      [SKIP_ERRORS_KEY]: DEFAULT_SKIP_ERRORS,
     };
     const result = addDefaultValues(options);
 
@@ -40,6 +43,7 @@ describe('src/lib/buildConfig/addDefaultValues', () => {
       [RECURSIVE_KEY]: true,
       [MODE_KEY]: MODE_DRY,
       [BATCH_SIZE_KEY]: 25,
+      [SKIP_ERRORS_KEY]: true,
     };
     const result = addDefaultValues(options);
 

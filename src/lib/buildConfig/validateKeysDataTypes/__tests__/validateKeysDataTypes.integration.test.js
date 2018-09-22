@@ -4,11 +4,13 @@ import {
   DEFAULT_BATCH_SIZE,
   DEFAULT_FORMAT,
   DEFAULT_RECURSIVE,
+  DEFAULT_SKIP_ERRORS,
   FORMAT_KEY,
   MODE_COPY,
   MODE_KEY,
   OUTPUT_DIRECTORY_KEY,
   RECURSIVE_KEY,
+  SKIP_ERRORS_KEY,
   SOURCE_DIRECTORIES_KEY,
 } from 'src/constants';
 import validateKeysDataTypes from 'src/lib/buildConfig/validateKeysDataTypes';
@@ -23,6 +25,7 @@ describe('src/lib/buildConfig/validateKeysDataTypes integration tests', () => {
       [SOURCE_DIRECTORIES_KEY]: validDirectory,
       [MODE_KEY]: MODE_COPY,
       [BATCH_SIZE_KEY]: DEFAULT_BATCH_SIZE,
+      [SKIP_ERRORS_KEY]: DEFAULT_SKIP_ERRORS,
     };
     const expected = {
       ...config,

@@ -7,6 +7,8 @@ import {
   MODE_KEY,
   MODE_COPY,
   RECURSIVE_KEY,
+  SKIP_ERRORS_KEY,
+  DEFAULT_SKIP_ERRORS,
 } from 'src/constants';
 
 /**
@@ -20,6 +22,7 @@ export default function addDefaultValues(options) {
     [RECURSIVE_KEY]: DEFAULT_RECURSIVE,
     [MODE_KEY]: MODE_COPY,
     [BATCH_SIZE_KEY]: DEFAULT_BATCH_SIZE,
+    [SKIP_ERRORS_KEY]: DEFAULT_SKIP_ERRORS,
     ...options,
   };
 }

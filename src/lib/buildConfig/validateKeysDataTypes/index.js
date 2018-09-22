@@ -1,5 +1,6 @@
 import validateRecursive from 'src/lib/buildConfig/validateKeysDataTypes/validateRecursive';
 import validateOutputDirectory from 'src/lib/buildConfig/validateKeysDataTypes/validateOutputDirectory';
+import validateSkipErrors from 'src/lib/buildConfig/validateKeysDataTypes/validateSkipErrors';
 import validateSourceDirectories from 'src/lib/buildConfig/validateKeysDataTypes/validateSourceDirectories';
 import validateFormat from 'src/lib/buildConfig/validateKeysDataTypes/validateFormat';
 import validateMode from 'src/lib/buildConfig/validateKeysDataTypes/validateMode';
@@ -19,6 +20,7 @@ export default function validateKeysDataTypes(config) {
   validatedConfig = validateFormat(validatedConfig);
   validatedConfig = validateMode(validatedConfig);
   validatedConfig = validateBatchSize(validatedConfig);
+  validatedConfig = validateSkipErrors(validatedConfig);
 
   return validatedConfig;
 }
