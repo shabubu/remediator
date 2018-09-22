@@ -1,6 +1,7 @@
 import {
   MODE_COPY,
   MODE_DRY,
+  MODE_KEY,
   MODE_MOVE,
 } from 'src/constants';
 
@@ -12,7 +13,7 @@ class InvalidModeError extends Error {
    * Constructor for error.
    */
   constructor() {
-    const message = `Mode must only be one of the following: ${MODE_COPY}, ${MODE_DRY}, and ${MODE_MOVE}`;
+    const message = `Option "${MODE_KEY}" must only be one of the following: ${MODE_COPY}, ${MODE_DRY}, and ${MODE_MOVE}`;
     super(message);
     this.message = message;
     Error.captureStackTrace(this, InvalidModeError);
