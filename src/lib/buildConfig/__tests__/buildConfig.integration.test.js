@@ -11,6 +11,8 @@ import {
   TRANSFORMER_REPLACE_STRING_KEY,
   MODE_KEY,
   MODE_COPY,
+  BATCH_SIZE_KEY,
+  DEFAULT_BATCH_SIZE,
 } from 'src/constants';
 
 describe('src/lib/buildConfig integration tests', () => {
@@ -29,6 +31,7 @@ describe('src/lib/buildConfig integration tests', () => {
       ],
       [RECURSIVE_KEY]: DEFAULT_RECURSIVE,
       [MODE_KEY]: MODE_COPY,
+      [BATCH_SIZE_KEY]: DEFAULT_BATCH_SIZE,
       [TRANSFORMER_ACTIONS_KEY]: [
         {
           [TRANSFORMER_NAME_KEY]: 'Day',

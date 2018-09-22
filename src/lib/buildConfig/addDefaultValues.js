@@ -1,10 +1,12 @@
 import {
+  BATCH_SIZE_KEY,
   FORMAT_KEY,
+  DEFAULT_BATCH_SIZE,
   DEFAULT_FORMAT,
   DEFAULT_RECURSIVE,
-  RECURSIVE_KEY,
   MODE_KEY,
   MODE_COPY,
+  RECURSIVE_KEY,
 } from 'src/constants';
 
 /**
@@ -17,6 +19,7 @@ export default function addDefaultValues(options) {
     [FORMAT_KEY]: DEFAULT_FORMAT,
     [RECURSIVE_KEY]: DEFAULT_RECURSIVE,
     [MODE_KEY]: MODE_COPY,
+    [BATCH_SIZE_KEY]: DEFAULT_BATCH_SIZE,
     ...options,
   };
 }

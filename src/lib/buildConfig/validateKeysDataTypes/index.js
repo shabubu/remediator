@@ -3,6 +3,7 @@ import validateOutputDirectory from 'src/lib/buildConfig/validateKeysDataTypes/v
 import validateSourceDirectories from 'src/lib/buildConfig/validateKeysDataTypes/validateSourceDirectories';
 import validateFormat from 'src/lib/buildConfig/validateKeysDataTypes/validateFormat';
 import validateMode from 'src/lib/buildConfig/validateKeysDataTypes/validateMode';
+import validateBatchSize from 'src/lib/buildConfig/validateKeysDataTypes/validateBatchSize';
 
 /**
  * Validates data types for all keys in Remediator config object.
@@ -17,6 +18,7 @@ export default function validateKeysDataTypes(config) {
   validatedConfig = validateSourceDirectories(validatedConfig);
   validatedConfig = validateFormat(validatedConfig);
   validatedConfig = validateMode(validatedConfig);
+  validatedConfig = validateBatchSize(validatedConfig);
 
   return validatedConfig;
 }

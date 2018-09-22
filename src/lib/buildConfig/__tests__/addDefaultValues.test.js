@@ -9,6 +9,8 @@ import {
   MODE_KEY,
   MODE_COPY,
   MODE_DRY,
+  BATCH_SIZE_KEY,
+  DEFAULT_BATCH_SIZE,
 } from 'src/constants';
 
 describe('src/lib/buildConfig/addDefaultValues', () => {
@@ -22,6 +24,7 @@ describe('src/lib/buildConfig/addDefaultValues', () => {
       [FORMAT_KEY]: DEFAULT_FORMAT,
       [RECURSIVE_KEY]: DEFAULT_RECURSIVE,
       [MODE_KEY]: MODE_COPY,
+      [BATCH_SIZE_KEY]: DEFAULT_BATCH_SIZE,
     };
     const result = addDefaultValues(options);
 
@@ -36,6 +39,7 @@ describe('src/lib/buildConfig/addDefaultValues', () => {
       [FORMAT_KEY]: ':YYYY:',
       [RECURSIVE_KEY]: true,
       [MODE_KEY]: MODE_DRY,
+      [BATCH_SIZE_KEY]: 25,
     };
     const result = addDefaultValues(options);
 

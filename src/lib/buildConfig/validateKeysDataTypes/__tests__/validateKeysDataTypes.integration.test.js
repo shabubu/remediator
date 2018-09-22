@@ -1,5 +1,7 @@
 import path from 'path';
 import {
+  BATCH_SIZE_KEY,
+  DEFAULT_BATCH_SIZE,
   DEFAULT_FORMAT,
   DEFAULT_RECURSIVE,
   FORMAT_KEY,
@@ -20,6 +22,7 @@ describe('src/lib/buildConfig/validateKeysDataTypes integration tests', () => {
       [RECURSIVE_KEY]: DEFAULT_RECURSIVE,
       [SOURCE_DIRECTORIES_KEY]: validDirectory,
       [MODE_KEY]: MODE_COPY,
+      [BATCH_SIZE_KEY]: DEFAULT_BATCH_SIZE,
     };
     const expected = {
       ...config,
