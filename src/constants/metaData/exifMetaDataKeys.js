@@ -45,3 +45,18 @@ export const EXIF_JPG_ORIGINAL_DATE_KEY = 'DateTimeOriginal';
  * @type {string}
  */
 export const EXIF_JPG_WIDTH_KEY = 'ExifImageWidth';
+
+/**
+ * Contains all keys constants from this module.
+ * @type {Array}
+ */
+export const ALL_EXIF_KEYS = [
+  EXIF_JPG_CREATE_DATE_KEY,
+  EXIF_JPG_DEVICE_MAKE_KEY,
+  EXIF_JPG_DEVICE_MODEL_KEY,
+  EXIF_JPG_HEIGHT_KEY,
+  EXIF_JPG_MODIFY_DATE_KEY,
+  EXIF_JPG_ORIENTATION_KEY,
+  EXIF_JPG_ORIGINAL_DATE_KEY,
+  EXIF_JPG_WIDTH_KEY,
+];
