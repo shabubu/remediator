@@ -40,5 +40,9 @@
     "jest": "^23.5.0",
     "webpack": "^4.17.2",
     "webpack-cli": "^3.1.0"
+  },
+  "dependencies": {
+    "dist-exiftool": "^10.53.0",
+    "node-exiftool": "^2.3.0"
   }
 }
