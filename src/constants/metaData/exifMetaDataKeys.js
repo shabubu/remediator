@@ -17,12 +17,6 @@ export const EXIF_JPG_DEVICE_MAKE_KEY = 'Make';
 export const EXIF_JPG_DEVICE_MODEL_KEY = 'Model';
 
 /**
- * Exif key for pixel heigh for a jpg.
- * @type {string}
- */
-export const EXIF_JPG_HEIGHT_KEY = 'ExifImageHeight';
-
-/**
  * Exif key for modify date for a jpg.
  * @type {string}
  */
@@ -41,10 +35,10 @@ export const EXIF_JPG_ORIENTATION_KEY = 'Orientation';
 export const EXIF_JPG_ORIGINAL_DATE_KEY = 'DateTimeOriginal';
 
 /**
- * Exif key for width for a jpg.
+ * Exif key for image width x height in pixels.
  * @type {string}
  */
-export const EXIF_JPG_WIDTH_KEY = 'ExifImageWidth';
+export const EXIF_JPG_RESOLUTION = 'ImageSize';
 
 /**
  * Contains all keys constants from this module.
@@ -54,9 +48,8 @@ export const ALL_EXIF_KEYS = [
   EXIF_JPG_CREATE_DATE_KEY,
   EXIF_JPG_DEVICE_MAKE_KEY,
   EXIF_JPG_DEVICE_MODEL_KEY,
-  EXIF_JPG_HEIGHT_KEY,
   EXIF_JPG_MODIFY_DATE_KEY,
   EXIF_JPG_ORIENTATION_KEY,
   EXIF_JPG_ORIGINAL_DATE_KEY,
-  EXIF_JPG_WIDTH_KEY,
+  EXIF_JPG_RESOLUTION,
 ];
