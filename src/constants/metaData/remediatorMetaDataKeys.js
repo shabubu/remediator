@@ -29,6 +29,12 @@ export const LIB_MODEL_KEY = 'deviceModel';
 export const LIB_ORIENTATION_KEY = 'orientation';
 
 /**
+ * Remediator metadata key for original file path.
+ * @type {string}
+ */
+export const LIB_ORIGINAL_FILE_PATH = 'filePath';
+
+/**
  * Remediator metadata key for file pixel width.
  * @type {string}
  */
