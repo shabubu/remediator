@@ -5,6 +5,12 @@
 export const LIB_DATE_KEY = 'date';
 
 /**
+ * Remediator metadata key for encountered error if skipErrors is enabled.
+ * @type {string}
+ */
+export const LIB_ERROR_KEY = 'error';
+
+/**
  * Remediator metadata key for file pixel height
  * @type {string}
  */
