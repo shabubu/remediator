@@ -32,7 +32,7 @@ describe('src/lib/getFilesMetaData/determineOldestDate', () => {
     expect(result).toEqual(expected);
   });
 
-  test('should return oldest date from exiftool dates', () => {
+  test('should return oldest date from exiftool date', () => {
     const fsDates = {
       [ATIME_KEY]: validExifTime + 1,
       [BIRTHTIME_KEY]: validExifTime + 2,
@@ -41,8 +41,6 @@ describe('src/lib/getFilesMetaData/determineOldestDate', () => {
     };
     const exifDates = {
       [EXIF_JPG_ORIGINAL_DATE_KEY]: validExifDate,
-      [EXIF_JPG_MODIFY_DATE_KEY]: validExifDate,
-      [EXIF_JPG_CREATE_DATE_KEY]: validExifDate,
     };
     const expected = validExifTime;
     const result = getOldestTimestamp(fsDates, exifDates);
