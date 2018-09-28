@@ -34,9 +34,10 @@ export default async function getFileMetaData(config, filePath) {
       width,
       height,
     ] = exifMeta[EXIF_JPG_RESOLUTION].split('x');
+    const date = new Date(getOldestTimestamp(fsMeta, exifMeta));
 
     return {
-      [LIB_DATE_KEY]: getOldestTimestamp(fsMeta, exifMeta),
+      [LIB_DATE_KEY]: date,
       [LIB_HEIGHT_KEY]: height,
       [LIB_MAKE_KEY]: exifMeta[EXIF_JPG_DEVICE_MAKE_KEY],
       [LIB_MODEL_KEY]: exifMeta[EXIF_JPG_DEVICE_MODEL_KEY],

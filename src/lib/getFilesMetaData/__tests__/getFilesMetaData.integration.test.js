@@ -27,7 +27,7 @@ describe('src/lib/getFilesMetaData integration tests', () => {
     ];
     const expected = [
       {
-        [LIB_DATE_KEY]: 946717200000,
+        [LIB_DATE_KEY]: new Date(946717200000),
         [LIB_HEIGHT_KEY]: '1',
         [LIB_WIDTH_KEY]: '1',
         [LIB_MODEL_KEY]: 'A Camera Model',
@@ -36,7 +36,7 @@ describe('src/lib/getFilesMetaData integration tests', () => {
         [LIB_ORIENTATION_KEY]: 'Horizontal (normal)',
       },
       {
-        [LIB_DATE_KEY]: 949485600000,
+        [LIB_DATE_KEY]: new Date(949485600000),
         [LIB_HEIGHT_KEY]: '2',
         [LIB_WIDTH_KEY]: '2',
         [LIB_MODEL_KEY]: undefined,
