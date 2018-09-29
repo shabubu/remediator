@@ -1,10 +1,10 @@
 init:
-  - ps: $env:TimestampBuildVersion = [TimeZoneInfo]::ConvertTimeBySystemTimeZoneId([DateTime]::UtcNow, "Pacific Standard Time").ToString('yy.M.d.HHmm')
+  tzutil /s "Pacific Standard Time"
 
 image:
-- Visual Studio 2015
-- Visual Studio 2017
-- Ubuntu
+  - Visual Studio 2015
+  - Visual Studio 2017
+  - Ubuntu
 
 environment:
   matrix:
@@ -16,18 +16,18 @@ environment:
     - nodejs_version: ""
 
 platform:
-- x86
-- x64
+  - x86
+  - x64
 
 install:
-- ps: Install-Product node $env:nodejs_version
-- npm install
+  - ps: Install-Product node $env:nodejs_version
+  - npm install
 
 test_script:
-- node --version
-- npm --version
-- npm run lint
-- npm run test
+  - node --version
+  - npm --version
+  - npm run lint
+  - npm run test
 
 # Don't actually build.
 build: off
