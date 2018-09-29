@@ -16,10 +16,10 @@ describe('src/lib/getFilesMetaData/getFileSystemMetaData', () => {
     return expect(result)
       .resolves
       .toEqual(expect.objectContaining({
-        [ATIME_KEY]: expect.any(Number),
-        [BIRTHTIME_KEY]: expect.any(Number),
-        [CTIME_KEY]: expect.any(Number),
-        [MTIME_KEY]: expect.any(Number),
+        [ATIME_KEY]: expect.any(Object),
+        [BIRTHTIME_KEY]: expect.any(Object),
+        [CTIME_KEY]: expect.any(Object),
+        [MTIME_KEY]: expect.any(Object),
       }));
   });
 });

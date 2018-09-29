@@ -29,8 +29,10 @@ const exifDateKeys = [
 export default function getOldestTimestamp(fsDates, exifDates) {
   const msDates = [];
 
-  // fs dates should be numerics already, just neeed to bundle them into array
-  fsDateKeys.forEach(key => msDates.push(fsDates[key]));
+  // fs dates converted to ms
+  fsDateKeys.forEach(key => msDates.push(
+    new Date(fsDates[key]).getTime(),
+  ));
 
   // convert exif date values into numeric and add to
   exifDateKeys.forEach((key) => {
