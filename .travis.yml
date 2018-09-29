@@ -13,3 +13,5 @@ script:
   - "npm run test"
   - "npm run lint"
   - "npm run test:ci"
+before_script:
+  - export TZ=America/Los_Angeles
