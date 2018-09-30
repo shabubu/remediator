@@ -16,15 +16,15 @@ import getExifToolMetaData from 'src/lib/getFilesMetaData/getExifToolMetaData';
 
 describe('src/lib/getFilesMetaData/getExifToolMetaData', () => {
   // setup and tear down exiftool process for test(s)
-  beforeEach(done => openExifToolProcess().then(() => done()));
-  afterEach(() => closeExifToolProcess());
+  beforeAll(done => openExifToolProcess().then(() => done()));
+  afterAll(() => closeExifToolProcess());
 
   test('should return object with metadata', () => {
     const filePath = path.resolve('./testAssets/1.jpg');
     const result = getExifToolMetaData(filePath);
 
     expect.assertions(1);
-    expect(result)
+    return expect(result)
       .resolves
       .toEqual(expect.objectContaining({
         [EXIF_JPG_CREATE_DATE_KEY]: expect.any(String),

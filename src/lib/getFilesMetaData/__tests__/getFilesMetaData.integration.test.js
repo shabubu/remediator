@@ -16,8 +16,8 @@ import getFilesMetaData from 'src/lib/getFilesMetaData';
 
 describe('src/lib/getFilesMetaData integration tests', () => {
   // setup and tear down exiftool process for test(s)
-  beforeEach(done => openExifToolProcess().then(() => done()));
-  afterEach(() => closeExifToolProcess());
+  beforeAll(done => openExifToolProcess().then(() => done()));
+  afterAll(() => closeExifToolProcess());
 
   test('should resolve expected metadata for 2 files', () => {
     const config = {};

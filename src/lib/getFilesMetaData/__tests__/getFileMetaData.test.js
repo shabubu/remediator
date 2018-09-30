@@ -18,8 +18,8 @@ import getFileMetaData from 'src/lib/getFilesMetaData/getFileMetaData';
 
 describe('src/lib/getFilesMetaData/getFileMetaData', () => {
   // setup and tear down exiftool process for test(s)
-  beforeEach(done => openExifToolProcess().then(() => done()));
-  afterEach(() => closeExifToolProcess());
+  beforeAll(done => openExifToolProcess().then(() => done()));
+  afterAll(() => closeExifToolProcess());
 
   test('should resolve object of metadata for a media file', () => {
     const config = {};
