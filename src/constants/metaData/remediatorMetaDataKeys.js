@@ -11,12 +11,6 @@ export const LIB_DATE_KEY = 'date';
 export const LIB_ERROR_KEY = 'error';
 
 /**
- * Remediator metadata key for file pixel height
- * @type {string}
- */
-export const LIB_HEIGHT_KEY = 'height';
-
-/**
  * Remediator metadata key for camera device make.
  * @type {string}
  */
@@ -41,7 +35,7 @@ export const LIB_ORIENTATION_KEY = 'orientation';
 export const LIB_ORIGINAL_FILE_PATH = 'filePath';
 
 /**
- * Remediator metadata key for file pixel width.
+ * Remediator metadata key for file pixel resolution.
  * @type {string}
  */
-export const LIB_WIDTH_KEY = 'width';
+export const LIB_RESOLUTION_KEY = 'resolution';

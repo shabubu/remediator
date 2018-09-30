@@ -1,4 +1,4 @@
-import { LIB_WIDTH_KEY } from 'src/constants/metaData';
+import { LIB_RESOLUTION_KEY } from 'src/constants/metaData';
 
 /**
  * Generates pixel width from meta data.
@@ -6,5 +6,8 @@ import { LIB_WIDTH_KEY } from 'src/constants/metaData';
  * @returns {number}              Returns pixel width of file.
  */
 export default function getWidth(fileMetaData) {
-  return fileMetaData[LIB_WIDTH_KEY];
+  const resolution = fileMetaData[LIB_RESOLUTION_KEY] || '';
+  const [width] = resolution.split('x');
+
+  return width || '';
 }

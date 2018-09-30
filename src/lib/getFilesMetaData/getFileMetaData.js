@@ -6,12 +6,11 @@ import {
   EXIF_JPG_RESOLUTION,
   LIB_DATE_KEY,
   LIB_ERROR_KEY,
-  LIB_HEIGHT_KEY,
   LIB_MAKE_KEY,
   LIB_MODEL_KEY,
   LIB_ORIENTATION_KEY,
   LIB_ORIGINAL_FILE_PATH,
-  LIB_WIDTH_KEY,
+  LIB_RESOLUTION_KEY,
 } from 'src/constants/metaData';
 import getExifToolMetaData from 'src/lib/getFilesMetaData/getExifToolMetaData';
 import getFileSystemMetaData from 'src/lib/getFilesMetaData/getFileSystemMetaData';
@@ -30,20 +29,15 @@ export default async function getFileMetaData(config, filePath) {
   try {
     const fsMeta = await getFileSystemMetaData(filePath);
     const exifMeta = await getExifToolMetaData(filePath);
-    const [
-      width,
-      height,
-    ] = exifMeta[EXIF_JPG_RESOLUTION].split('x');
     const date = new Date(getOldestTimestamp(fsMeta, exifMeta));
 
     return {
       [LIB_DATE_KEY]: date,
-      [LIB_HEIGHT_KEY]: height,
       [LIB_MAKE_KEY]: exifMeta[EXIF_JPG_DEVICE_MAKE_KEY],
       [LIB_MODEL_KEY]: exifMeta[EXIF_JPG_DEVICE_MODEL_KEY],
       [LIB_ORIENTATION_KEY]: exifMeta[EXIF_JPG_ORIENTATION_KEY],
       [LIB_ORIGINAL_FILE_PATH]: filePath,
-      [LIB_WIDTH_KEY]: width,
+      [LIB_RESOLUTION_KEY]: exifMeta[EXIF_JPG_RESOLUTION],
     };
   } catch (error) {
     // return error in object if we are skipping errors

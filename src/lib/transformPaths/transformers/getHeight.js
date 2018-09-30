@@ -1,4 +1,4 @@
-import { LIB_HEIGHT_KEY } from 'src/constants/metaData';
+import { LIB_RESOLUTION_KEY } from 'src/constants/metaData';
 
 /**
  * Generates pixel height from meta data.
@@ -6,5 +6,8 @@ import { LIB_HEIGHT_KEY } from 'src/constants/metaData';
  * @returns {number}              Returns pixel height of file.
  */
 export default function getHeight(fileMetaData) {
-  return fileMetaData[LIB_HEIGHT_KEY];
+  const resolution = fileMetaData[LIB_RESOLUTION_KEY] || '';
+  const resolutionParts = resolution.split('x');
+
+  return resolutionParts[1] || '';
 }

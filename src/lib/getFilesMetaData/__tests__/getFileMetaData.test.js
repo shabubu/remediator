@@ -1,14 +1,13 @@
 import path from 'path';
-import { SKIP_ERRORS_KEY } from 'src/constants';
+import { SKIP_ERRORS_KEY } from 'src/constants/config';
 import {
   LIB_DATE_KEY,
   LIB_ERROR_KEY,
-  LIB_HEIGHT_KEY,
   LIB_MAKE_KEY,
   LIB_MODEL_KEY,
   LIB_ORIENTATION_KEY,
   LIB_ORIGINAL_FILE_PATH,
-  LIB_WIDTH_KEY,
+  LIB_RESOLUTION_KEY,
 } from 'src/constants/metaData';
 import {
   closeExifToolProcess,
@@ -26,8 +25,7 @@ describe('src/lib/getFilesMetaData/getFileMetaData', () => {
     const filePath = path.resolve('./testAssets/1.jpg');
     const expected = {
       [LIB_DATE_KEY]: new Date(946717200000),
-      [LIB_HEIGHT_KEY]: '1',
-      [LIB_WIDTH_KEY]: '1',
+      [LIB_RESOLUTION_KEY]: '1x1',
       [LIB_MODEL_KEY]: 'A Camera Model',
       [LIB_MAKE_KEY]: 'A Camera Maker',
       [LIB_ORIGINAL_FILE_PATH]: filePath,
