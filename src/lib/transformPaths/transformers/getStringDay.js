@@ -13,7 +13,7 @@ const DAYS = [
 /**
  * Generates string day of the week from meta data.
  * @param   {object} fileMetaData Remediator meta data object.
- * @returns {number}              Returns string version of day of week.
+ * @returns {string}              Returns string version of day of week.
  */
 export default function getStringDay(fileMetaData) {
   const numericWeekDay = fileMetaData[LIB_DATE_KEY].getDay();

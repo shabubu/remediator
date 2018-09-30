@@ -18,7 +18,7 @@ const MONTHS = [
 /**
  * Generates string month from meta data.
  * @param   {object} fileMetaData Remediator meta data object.
- * @returns {number}              Returns string version of month.
+ * @returns {string}              Returns string version of month.
  */
 export default function getStringMonth(fileMetaData) {
   const numericMonth = getNumericMonth(fileMetaData);
