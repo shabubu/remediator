@@ -17,7 +17,7 @@ import getExifToolMetaData from 'src/lib/getFilesMetaData/getExifToolMetaData';
 describe('src/lib/getFilesMetaData/getExifToolMetaData', () => {
   // setup and tear down exiftool process for test(s)
   beforeAll(done => openExifToolProcess().then(() => done()));
-  afterAll(() => closeExifToolProcess());
+  afterAll(done => closeExifToolProcess().then(() => done()));
 
   test('should return object with metadata', () => {
     const filePath = path.resolve('./testAssets/1.jpg');
