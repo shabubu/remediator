@@ -1,17 +1,13 @@
-import {
-  closeExifToolProcess,
-  openExifToolProcess,
-} from 'src/lib/exifTool/index';
+import { openExifToolProcess } from 'src/lib/exifTool/index';
 
 describe('src/lib/exifTool/openExifToolProcess', () => {
-  afterEach(() => closeExifToolProcess());
-
   test('should resolve process id', () => {
-    const pid = openExifToolProcess();
+    const result = openExifToolProcess();
+    const expected = 1234;
 
     expect.assertions(1);
-    return expect(pid)
+    return expect(result)
       .resolves
-      .toEqual(expect.any(Number));
+      .toEqual(expected);
   });
 });

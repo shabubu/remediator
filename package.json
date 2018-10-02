@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "webpack --mode=production",
-    "lint": "eslint --ext .js ./src/**",
+    "lint": "eslint --ext .js ./src/** ./__mocks__/**",
     "test": "jest --config=.jestrc.json",
     "test:ci": "jest --config=.jestrc.json --coverage --coverageReporters=text-lcov | coveralls"
   },
