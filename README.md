@@ -26,6 +26,41 @@ $ npm install remediator --save
 ```
 
 ## Usage
+Remediator is a simple to use library that accepts a single options object for its arguments.  Remediator returns a Promise that resolves successful file transformation objects and rejects any errors encountered.
+
+### Basic Example
+Assuming you have a directory named `/unsorted` that contains a single file named `image.jpg` that was taken at 1:00 AM on January 1st, 2000.  The following code could be used to sort the directory using default options settings.
+
+```javascript
+import remediator from 'remediator';
+
+async function example() {
+  const results = await remediator({
+    source: [
+      '/unsorted',
+    ],
+    output: '/sorted',
+  });
+  
+  console.log(results);
+}
+```
+
+Since the we are using the default format of `:YYYY:/:MM0:. :Month:/:DD0: :Day:/:YYYY:.:MM0:.:DD0: :HH0:.:MN0:.:Ext:` the expected output from the above code would be:
+
+```javascript
+{
+  results: [
+    {
+      source: '/unsorted/image.jpg',
+      output: '/sorted/2000/01. January/01 Saturday/2000.01.01 01.00.jpg',
+    },
+  ],
+  errors: [],
+}
+```
+
+Finally, since this was using the default `mode` of "copy" both `/unsorted/image.jpg` and `/sorted/2000/01. January/01 Saturday/2000.01.01 01.00.jpg` should exist.
 
 ### Remediator Options
 
@@ -80,7 +115,13 @@ $ npm install remediator --save
 **Type:** String|Array<br />
 **Required:** Yes<br />
 
-## Building Format String
+## Building Format Strings
+Format strings are simply a basic template for file output.  `:`'s are used to denote the start and end of a transformer section.  Remediator will replace the first "transformer" it encounters in a section.  If the first transformer found is empty or null everything between the `:`'s will not be added to the filename.
+
+For example if you have a format string of `:YYYY::-Make-:.:Ext:` and a image named `image.jpg` that was taken in the year 2000 but does NOT have any exif data for the device make the output would be: `2000.jpg`.  However, if `image.jpg` did have a device make of "Sony" the output would be: `2000-Sony-.jpg`.
+
+The following tables list all currently supported "transformers" by Remediator.
+
 ### Transformers
 #### Date based
 <table>
