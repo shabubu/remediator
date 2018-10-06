@@ -1,10 +1,29 @@
 {
   "name": "remediator",
-  "version": "0.9.0",
-  "description": "",
+  "version": "0.1.0",
+  "description": "Node library to sort images and video based off of their filesystem metadata or exif/media metadata formatted from a predefined or custom template.",
+  "keywords": [
+    "remediator",
+    "exif",
+    "metadata",
+    "photo",
+    "video",
+    "image",
+    "media",
+    "sort",
+    "rename",
+    "exiftool"
+  ],
+  "homepage": "https://github.com/shabubu/remediator#readme",
+  "bugs": {
+    "url": "https://github.com/shabubu/remediator/issues"
+  },
+  "license": "MIT",
+  "author": "Jason Zajdel <zajdel.jason@gmail.com>",
   "main": "dist/index.js",
-  "directories": {
-    "test": "test"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shabubu/remediator.git"
   },
   "scripts": {
     "build": "webpack --mode=production",
@@ -12,16 +31,10 @@
     "test": "jest --config=.jestrc.json",
     "test:ci": "jest --config=.jestrc.json --coverage --coverageReporters=text-lcov | coveralls"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/shabubu/remediator.git"
+  "dependencies": {
+    "dist-exiftool": "^10.53.0",
+    "node-exiftool": "^2.3.0"
   },
-  "author": "Jason Zajdel <zajdel.jason@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/shabubu/remediator/issues"
-  },
-  "homepage": "https://github.com/shabubu/remediator#readme",
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
@@ -41,8 +54,7 @@
     "webpack": "^4.17.2",
     "webpack-cli": "^3.1.0"
   },
-  "dependencies": {
-    "dist-exiftool": "^10.53.0",
-    "node-exiftool": "^2.3.0"
+  "engines": {
+    "node": ">=6.0.0"
   }
 }
