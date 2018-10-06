@@ -1,11 +1,12 @@
 # Remediator
-Node library to sort images and video based off of their filesystem metadata or exif/media metadata based off of a predefined or custom template.
+Node library to sort images and video based off of their filesystem metadata or exif/media metadata formatted from a predefined or custom template.
 
 [![Travis Tests](https://travis-ci.org/shabubu/remediator.svg?branch=master)](https://travis-ci.org/shabubu/remediator)
 [![Appveyor Tests](https://ci.appveyor.com/api/projects/status/github/shabubu/remediator?branch=master&svg=true)](https://ci.appveyor.com/project/shabubu/remediator)
 [![Coverage Status](https://coveralls.io/repos/github/shabubu/remediator/badge.svg?branch=master)](https://coveralls.io/github/shabubu/remediator?branch=master)
 [![Dependency Status](https://img.shields.io/david/shabubu/remediator.svg?style=flat-square)](https://david-dm.org/shabubu/remediator)
 [![Known Vulnerabilities](https://snyk.io/test/github/shabubu/remediator/badge.svg?targetFile=package.json)](https://snyk.io/test/github/shabubu/remediator?targetFile=package.json)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Installation
 Installation assumes you have already installed [Node.js](https://nodejs.org/). If you have not done this or do not know how to please follow the directions at [https://nodejs.org/](https://nodejs.org/).
@@ -24,8 +25,64 @@ Now install the Remediator package into your application and save it as a depend
 $ npm install remediator --save
 ```
 
-## Transformers
-### Date based
+## Usage
+
+### Remediator Options
+
+#### Batch Size
+**Description:** Amount of files to process asynchronously at a time.<br />
+**Key:** batchSize<br />
+**Type:** Integer<br />
+**Required:** No<br />
+**Default:** 20
+
+#### Format
+**Description:** Template string to use when building new filenames.<br />
+**Key:** format<br />
+**Type:** String<br />
+**Required:** No<br />
+**Default:** :YYYY:/:MM0:. :Month:/:DD0: :Day:/:YYYY:.:MM0:.:DD0: :HH0:.:MN0:.:Ext:
+
+#### Mode
+**Description:** Remediator supports running in 3 different modes: dry, copy, or move.  <br />
+* Dry - Remediator resolves only the results without actually changing any files.
+* Copy - Remediator resolves results and copies files to new paths.
+* Move - Remeditaor resolves results and moves original files to new paths.
+ 
+**Key:** mode<br />
+**Type:** string<br />
+**Required:** No<br />
+**Default:** copy
+
+#### Output directory
+**Description:** Directory to output files into after being transformed from provided format.  Must have read and write permissions to this directory.<br />
+**Key:** output<br />
+**Type:** String<br />
+**Required:** Yes
+
+#### Recurse Source Directories
+**Description:** Whether or not to get all files from subdirectories of source directories.<br />
+**Key:** recursive<br />
+**Type:** Boolean<br />
+**Required:** No<br />
+**Default:** false
+
+#### Skip Processing Errors
+**Description:** If you would like to not throw or reject errors during processing you may choose to skip errors.  Skipping errors allows to continue process all files in source directories even if an error is encountered along the way.  If errors are skipped then the final results will include an array of errors that were encountered.<br />
+**Key:** skipErrors<br />
+**Type:** Boolean<br />
+**Required:** No<br />
+**Default:** false
+
+#### Source Directories
+**Description:** Directory(s) to get files to transform from.  Source may be a single directory as a string or as an array of directory strings.<br />
+**Key:** source<br />
+**Type:** String|Array<br />
+**Required:** Yes<br />
+
+## Building Format String
+### Transformers
+#### Date based
 <table>
     <thead>
         <tr>
@@ -97,7 +154,7 @@ $ npm install remediator --save
     </tbody>
 </table>
 
-### Time based
+#### Time based
 <table>
     <thead>
         <tr>
@@ -133,7 +190,7 @@ $ npm install remediator --save
     </tbody>
 </table>
 
-### Device Based
+#### Device Based
 <table>
     <thead>
         <tr>
@@ -179,7 +236,7 @@ $ npm install remediator --save
     </tbody>
 </table>
 
-### File Metadata Based
+#### File Metadata Based
 <table>
     <thead>
         <tr>
