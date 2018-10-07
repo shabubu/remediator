@@ -6,7 +6,7 @@ import transformPathFromMetaData from 'src/lib/transformPaths/transformPathFromM
  * @param   {Array}  fileMetaDatas Array of Remediator metadata objects.
  * @returns {Array}                Array of objects with source and output transformations.
  */
-export default function transformPaths(config, fileMetaDatas) {
+export default function transformPathsFromMetaData(config, fileMetaDatas) {
   const transformedFiles = [];
 
   fileMetaDatas.forEach(

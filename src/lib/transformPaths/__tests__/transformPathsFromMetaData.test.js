@@ -8,9 +8,9 @@ import {
 } from 'src/constants';
 import buildConfig from 'src/lib/buildConfig';
 import getFileMetaData from 'src/lib/getFilesMetaData/getFileMetaData';
-import transformPaths from 'src/lib/transformPaths/index';
+import transformPathsFromMetaData from 'src/lib/transformPaths/transformPathsFromMetaData';
 
-describe('src/lib/transformPaths integration tests', () => {
+describe('src/lib/transformPathsFromMetaData', () => {
   test('should return array of transformed path objects', async () => {
     const output = './';
     const source = './testAssets';
@@ -39,7 +39,7 @@ describe('src/lib/transformPaths integration tests', () => {
         [RETURN_DATA_SOURCE_KEY]: filePath2,
       },
     ];
-    const result = transformPaths(
+    const result = transformPathsFromMetaData(
       config,
       [
         metaData1,
