@@ -24,13 +24,22 @@ export default function transformPath(config, fileMetaData) {
   transformerActions.forEach((action) => {
     const transformer = action[TRANSFORMER_NAME_KEY];
     const transformResult = transformers[transformer](fileMetaData);
-    const replace = transformResult || '';
+    let replace = '';
+
+    if (transformResult) {
+      replace = action[TRANSFORMER_REPLACE_STRING_KEY].replace(
+        action[TRANSFORMER_NAME_KEY],
+        transformResult,
+      );
+    }
 
     newPath = newPath.replace(
       action[TRANSFORMER_REPLACE_STRING_KEY],
       replace,
     );
   });
+
+  newPath = newPath.replace(/:/g, '');
 
   return {
     [RETURN_DATA_OUTPUT_KEY]: path.join(config[OUTPUT_DIRECTORY_KEY], newPath),

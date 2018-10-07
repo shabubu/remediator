@@ -39,14 +39,14 @@ describe('src/lib/transformPaths/transformPath', () => {
     const config = await buildConfig({
       [OUTPUT_DIRECTORY_KEY]: output,
       [SOURCE_DIRECTORIES_KEY]: source,
-      [FORMAT_KEY]: ':YYYY::-Model-:.:Ext:',
+      [FORMAT_KEY]: ':-YYYY-::-Model-:.:Ext:',
     });
     const filePath = path.join(config[SOURCE_DIRECTORIES_KEY][0], '2.jpg');
     const metaData = await getFileMetaData(config, filePath);
     const expected = {
       [RETURN_DATA_OUTPUT_KEY]: path.join(
         config[OUTPUT_DIRECTORY_KEY],
-        '2000.jpg',
+        '-2000-.jpg',
       ),
       [RETURN_DATA_SOURCE_KEY]: filePath,
     };
