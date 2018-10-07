@@ -8,9 +8,9 @@ import {
 } from 'src/constants';
 import buildConfig from 'src/lib/buildConfig';
 import getFileMetaData from 'src/lib/getFilesMetaData/getFileMetaData';
-import transformPath from 'src/lib/transformPaths/transformPath';
+import transformPathFromMetaData from 'src/lib/transformPaths/transformPathFromMetaData';
 
-describe('src/lib/transformPaths/transformPath', () => {
+describe('src/lib/transformPaths/transformPathFromMetaData', () => {
   test('should return object with original file path and transformed path', async () => {
     const output = './';
     const source = './testAssets';
@@ -27,7 +27,7 @@ describe('src/lib/transformPaths/transformPath', () => {
       ),
       [RETURN_DATA_SOURCE_KEY]: filePath,
     };
-    const result = transformPath(config, metaData);
+    const result = transformPathFromMetaData(config, metaData);
 
     expect.assertions(1);
     expect(result).toEqual(expected);
@@ -50,7 +50,7 @@ describe('src/lib/transformPaths/transformPath', () => {
       ),
       [RETURN_DATA_SOURCE_KEY]: filePath,
     };
-    const result = transformPath(config, metaData);
+    const result = transformPathFromMetaData(config, metaData);
 
     expect.assertions(1);
     expect(result).toEqual(expected);

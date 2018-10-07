@@ -15,9 +15,9 @@ import transformers from 'src/lib/transformPaths/transformers';
  * "Transforms" file meta data into new file path.
  * @param   {object} config       Remediator config object.
  * @param   {object} fileMetaData File Remediator metadata object.
- * @returns {object}                   Returns object with source filename and transformed output.
+ * @returns {object}              Returns object with source filename and transformed output.
  */
-export default function transformPath(config, fileMetaData) {
+export default function transformPathFromMetaData(config, fileMetaData) {
   let newPath = config[FORMAT_KEY];
   const transformerActions = config[TRANSFORMER_ACTIONS_KEY];
 

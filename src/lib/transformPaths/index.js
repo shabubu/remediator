@@ -1,8 +1,8 @@
-import transformPath from 'src/lib/transformPaths/transformPath';
+import transformPathFromMetaData from 'src/lib/transformPaths/transformPathFromMetaData';
 
 /**
  * "Transforms" file meta data for multiple files into new file paths.
- * @param   {object} config        8Remediator config object.
+ * @param   {object} config        Remediator config object.
  * @param   {Array}  fileMetaDatas Array of Remediator metadata objects.
  * @returns {Array}                Array of objects with source and output transformations.
  */
@@ -11,7 +11,7 @@ export default function transformPaths(config, fileMetaDatas) {
 
   fileMetaDatas.forEach(
     metaData => transformedFiles.push(
-      transformPath(config, metaData),
+      transformPathFromMetaData(config, metaData),
     ),
   );
 
