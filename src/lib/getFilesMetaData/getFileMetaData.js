@@ -21,7 +21,7 @@ import getOldestTimestamp from 'src/lib/getFilesMetaData/getOldestTimestamp';
  * @param    {object}  config   Remediator config object.
  * @param    {string}  filePath File to build metadata from.
  * @returns  {Promise}
- * @resolves {object}           Object of metadata of object with error if skipping errors and error
+ * @resolves {object}           Object of metadata of file with error if skipping errors and error
  *                              encountered.
  * @rejects  {Error}            Rejects an error if not skipping errors and error encountered.
  */
