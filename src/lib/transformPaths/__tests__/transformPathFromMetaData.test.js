@@ -1,7 +1,10 @@
 import path from 'path';
 import {
   FORMAT_KEY,
+  LIB_ERROR_KEY,
+  LIB_ORIGINAL_FILE_PATH,
   OUTPUT_DIRECTORY_KEY,
+  RETURN_DATA_ERROR_KEY,
   RETURN_DATA_OUTPUT_KEY,
   RETURN_DATA_SOURCE_KEY,
   SOURCE_DIRECTORIES_KEY,
@@ -49,6 +52,28 @@ describe('src/lib/transformPaths/transformPathFromMetaData', () => {
         '-2000-.jpg',
       ),
       [RETURN_DATA_SOURCE_KEY]: filePath,
+    };
+    const result = transformPathFromMetaData(config, metaData);
+
+    expect.assertions(1);
+    expect(result).toEqual(expected);
+  });
+
+  test('should return object with original path and error if error in metadata', async () => {
+    const output = './';
+    const source = './testAssets';
+    const config = await buildConfig({
+      [OUTPUT_DIRECTORY_KEY]: output,
+      [SOURCE_DIRECTORIES_KEY]: source,
+    });
+    const filePath = path.join(config[SOURCE_DIRECTORIES_KEY][0], '1.jpg');
+    const metaData = {
+      [LIB_ERROR_KEY]: new Error(),
+      [LIB_ORIGINAL_FILE_PATH]: filePath,
+    };
+    const expected = {
+      [RETURN_DATA_ERROR_KEY]: metaData[LIB_ERROR_KEY],
+      [RETURN_DATA_SOURCE_KEY]: metaData[[LIB_ORIGINAL_FILE_PATH]],
     };
     const result = transformPathFromMetaData(config, metaData);
 
