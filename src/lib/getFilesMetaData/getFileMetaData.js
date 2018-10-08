@@ -43,6 +43,7 @@ export default async function getFileMetaData(config, filePath) {
     // return error in object if we are skipping errors
     if (config[SKIP_ERRORS_KEY]) {
       return {
+        [LIB_ORIGINAL_FILE_PATH]: filePath,
         [LIB_ERROR_KEY]: error,
       };
     }

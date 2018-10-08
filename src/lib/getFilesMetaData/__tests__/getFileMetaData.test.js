@@ -45,6 +45,7 @@ describe('src/lib/getFilesMetaData/getFileMetaData', () => {
     };
     const filePath = path.resolve('./testAssets/notAFile.jpg');
     const expected = {
+      [LIB_ORIGINAL_FILE_PATH]: filePath,
       [LIB_ERROR_KEY]: expect.anything(),
     };
     const result = getFileMetaData(config, filePath);
