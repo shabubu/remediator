@@ -23,6 +23,7 @@ export default function transformPathFromMetaData(config, fileMetaData) {
   const returnData = {
     [RETURN_DATA_SOURCE_KEY]: fileMetaData[LIB_ORIGINAL_FILE_PATH],
   };
+
   // if there was previously an error we want to skip over generating a path
   if (fileMetaData[LIB_ERROR_KEY]) {
     returnData[RETURN_DATA_ERROR_KEY] = fileMetaData[LIB_ERROR_KEY];
