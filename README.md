@@ -49,15 +49,12 @@ async function example() {
 Since the we are using the default format of `:YYYY:/:MM0:. :Month:/:DD0: :Day:/:YYYY:.:MM0:.:DD0: :HH0:.:MN0:.:Ext:` the expected output from the above code would be:
 
 ```javascript
-{
-  results: [
-    {
-      source: '/unsorted/image.jpg',
-      output: '/sorted/2000/01. January/01 Saturday/2000.01.01 01.00.jpg',
-    },
-  ],
-  errors: [],
-}
+[
+  {
+    source: '/unsorted/image.jpg',
+    output: '/sorted/2000/01. January/01 Saturday/2000.01.01 01.00.jpg',
+  },
+]
 ```
 
 Finally, since this was using the default `mode` of "copy" both `/unsorted/image.jpg` and `/sorted/2000/01. January/01 Saturday/2000.01.01 01.00.jpg` should exist.
@@ -118,7 +115,7 @@ Finally, since this was using the default `mode` of "copy" both `/unsorted/image
 ## Building Format Strings
 Format strings are simply a basic template for file output.  `:`'s are used to denote the start and end of a transformer section.  Remediator will replace the first "transformer" it encounters in a section.  If the first transformer found is empty or null everything between the `:`'s will not be added to the filename.
 
-For example if you have a format string of `:YYYY::-Make-:.:Ext:` and a image named `image.jpg` that was taken in the year 2000 but does NOT have any exif data for the device make the output would be: `2000.jpg`.  However, if `image.jpg` did have a device make of "Sony" the output would be: `2000-Sony-.jpg`.
+For example, if you have a format string of `:YYYY::-Make-:.:Ext:` and a image named `image.jpg` that was taken in the year 2000 but does NOT have any exif data for the device make the output would be: `2000.jpg`.  However, if `image.jpg` did have a device make of "Sony" the output would be: `2000-Sony-.jpg`.
 
 The following tables list all currently supported "transformers" by Remediator.
 
