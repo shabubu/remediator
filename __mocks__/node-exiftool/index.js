@@ -2,6 +2,7 @@
 import path from 'path';
 import image1Meta from './image1Meta';
 import image2Meta from './image2Meta';
+import image6Meta from './image6Meta';
 
 const PID = 1234;
 
@@ -22,7 +23,11 @@ export default {
           returnObject = image1Meta;
           break;
         case path.resolve('./testAssets/2.jpg'):
+        case path.resolve('./testAssets/subDir2/4.jpg'):
           returnObject = image2Meta;
+          break;
+        case path.resolve('./testAssets/subDir/anotherSubDir/6.jpg'):
+          returnObject = image6Meta;
           break;
         default:
           break;
