@@ -18,6 +18,7 @@ export default {
 
       switch (filePath) {
         case path.resolve('./testAssets/1.jpg'):
+        case path.resolve('./testAssets/subDir/3.jpg'):
           returnObject = image1Meta;
           break;
         case path.resolve('./testAssets/2.jpg'):
