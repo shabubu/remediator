@@ -87,6 +87,8 @@ describe('Remediator integration tests', () => {
     expect.assertions(1);
     return expect(result)
       .resolves
-      .toEqual(expected);
+      .toEqual(
+        expect.arrayContaining(expected),
+      );
   });
 });
