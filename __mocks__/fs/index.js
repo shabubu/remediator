@@ -1,6 +1,6 @@
-const path = require('path');
+import path from 'path';
 
-const index = jest.genMockFromModule('fs');
+const fs = jest.genMockFromModule('fs');
 const badCopyPath = path.resolve('./testAssets/badCopyDir/1.jpg');
 
 /**
@@ -19,6 +19,6 @@ function copyFile(source, target, cb) {
   cb(error);
 }
 
-index.copyFile = copyFile;
+fs.copyFile = copyFile;
 
-module.exports = index;
+export default fs;
