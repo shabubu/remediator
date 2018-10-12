@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "dist-exiftool": "^10.53.0",
+    "mkdirp": "^0.5.1",
     "node-exiftool": "^2.3.0"
   },
   "devDependencies": {
