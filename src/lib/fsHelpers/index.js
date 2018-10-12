@@ -5,3 +5,4 @@ export { default as getFilesFromDirectory } from 'src/lib/fsHelpers/getFilesFrom
 export { default as getFilesFromDirectories } from 'src/lib/fsHelpers/getFilesFromDirectories';
 export { default as getFileStats } from 'src/lib/fsHelpers/getFileStats';
 export { default as copyFile } from 'src/lib/fsHelpers/copyFile';
+export { default as moveFile } from 'src/lib/fsHelpers/moveFile';
