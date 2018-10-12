@@ -9,7 +9,7 @@ Node library to sort images and video based off of their filesystem metadata or 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Installation
-Installation assumes you have already installed [Node.js](https://nodejs.org/). If you have not done this or do not know how to please follow the directions at [https://nodejs.org/](https://nodejs.org/).
+Installation assumes you have already installed v8.5.0 or greater of [Node.js](https://nodejs.org/). If you have not done this, or do not know how to, please follow the directions at [https://nodejs.org/](https://nodejs.org/).
 
 #### Setup Application
 Either use an existing [npm](https://www.npmjs.com) package or follow these steps to create a new application.
@@ -56,6 +56,7 @@ Since the we are using the default format of `:YYYY:/:MM0:. :Month:/:DD0: :Day:/
   },
 ]
 ```
+Note: If `skipErrors` option is `true` if any errors were encountered for a `source` a `error` key will be present with the error preventing transformation.
 
 Finally, since this was using the default `mode` of "copy" both `/unsorted/image.jpg` and `/sorted/2000/01. January/01 Saturday/2000.01.01 01.00.jpg` should exist.
 
