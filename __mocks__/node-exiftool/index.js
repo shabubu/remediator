@@ -26,6 +26,7 @@ export default {
         case path.resolve('./testAssets/subDir2/4.jpg'):
           returnObject = image2Meta;
           break;
+        case path.resolve('./testAssets/.hiddenDir/5.jpg'):
         case path.resolve('./testAssets/subDir/anotherSubDir/6.jpg'):
           returnObject = image6Meta;
           break;
