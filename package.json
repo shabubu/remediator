@@ -1,6 +1,6 @@
 {
   "name": "remediator",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Node library to sort images and video based off of their filesystem metadata or exif/media metadata formatted from a predefined or custom template.",
   "keywords": [
     "remediator",
