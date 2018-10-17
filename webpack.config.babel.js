@@ -19,6 +19,7 @@ export default {
     path: path.resolve(__dirname, 'dist'),
     filename: 'remediator.js',
     library: 'remediator',
+    libraryTarget: 'umd',
   },
 
   resolve: {
