@@ -23,7 +23,7 @@
   "files": [
     "dist/"
   ],
-  "main": "dist/index.js",
+  "main": "dist/remediator.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shabubu/remediator.git"

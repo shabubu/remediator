@@ -1,6 +1,13 @@
 Changelog
 =========
 
+### 0.1.3
+
+* Release October 16, 2018
+
+Bug Fixes:
+* Fix for export main path.  (all build issues should be resolved)
+
 ### 0.1.2
 
 * Release October 16, 2018
