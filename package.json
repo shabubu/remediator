@@ -20,6 +20,9 @@
   },
   "license": "MIT",
   "author": "Jason Zajdel <zajdel.jason@gmail.com>",
+  "files": [
+    "dist/"
+  ],
   "main": "dist/index.js",
   "repository": {
     "type": "git",
