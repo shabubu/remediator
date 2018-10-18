@@ -1,9 +1,13 @@
 Changelog
 =========
 
+### 0.3.0 October 17, 2018
+
+* Default mode is now dry from copy
+
 ### 0.2.0 October 17, 2018
 
-* Remediator now 
+* Remediator now exports its constants
 
 ### 0.1.3 - October 16, 2018
 
@@ -18,7 +22,7 @@ Bug Fixes:
 ### 0.1.1 Release October 16, 2018
 
 Bug Fixes:
-* Now exporting as modules and not variable on build.
+* Now exporting as modules and not variable on build
 
 ### 0.1.0 Release October 14, 2018
 
