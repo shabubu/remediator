@@ -32,6 +32,7 @@
     "build": "webpack --mode=production",
     "lint": "eslint --ext .js ./src/** ./__mocks__/**",
     "prepublishOnly": "npm run lint && npm run test && npm run build",
+    "release-it": "release-it",
     "test": "jest --config=.jestrc.json",
     "test:ci": "jest --config=.jestrc.json --coverage --coverageReporters=text-lcov | coveralls"
   },
@@ -56,6 +57,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.0",
     "jest": "^23.5.0",
+    "release-it": "^7.6.2",
     "webpack": "^4.17.2",
     "webpack-cli": "^3.1.0"
   },
