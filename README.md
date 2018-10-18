@@ -58,7 +58,7 @@ Since the we are using the default format of `:YYYY:/:MM0:. :Month:/:DD0: :Day:/
 ```
 Note: If `skipErrors` option is `true` if any errors were encountered for a `source` a `error` key will be present with the error preventing transformation.
 
-Finally, since this was using the default `mode` of "copy" both `/unsorted/image.jpg` and `/sorted/2000/01. January/01 Saturday/2000.01.01 01.00.jpg` should exist.
+Finally, since this was using the default `mode` of "dry" `/unsorted/image.jpg` should remain and `/sorted/2000/01. January/01 Saturday/2000.01.01 01.00.jpg` should not exist.
 
 ### Remediator Options
 
@@ -85,7 +85,7 @@ Finally, since this was using the default `mode` of "copy" both `/unsorted/image
 **Key:** mode<br />
 **Type:** string<br />
 **Required:** No<br />
-**Default:** copy
+**Default:** dry
 
 #### Output directory
 **Description:** Directory to output files into after being transformed from provided format.  Must have read and write permissions to this directory.<br />

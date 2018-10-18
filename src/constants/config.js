@@ -80,6 +80,12 @@ export const MODE_KEY = 'mode';
 export const MODE_MOVE = 'move';
 
 /**
+ * Default value for MODE_KEY if not provided as an option.
+ * @type {string}
+ */
+export const DEFAULT_MODE = MODE_DRY;
+
+/**
  * Config object key for output directory.
  * @type {string}
  */
