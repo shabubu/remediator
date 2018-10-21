@@ -22,16 +22,13 @@ export default async function transformPaths(config, sourceFiles) {
   await openExifToolProcess();
 
   // loop synchronously over chunks to honor batch sizes
-  for (let chunkKey = 0; chunkKey < filesChunks.length; chunkKey += 1) {
-    const chunkFiles = filesChunks[chunkKey];
-    /* eslint-disable no-await-in-loop */
+  filesChunks.forEach(async (filesChunk) => {
     // we want to intentionally run chunks synchronously to honor batch size config
-    const filesMeta = await getFilesMetaData(config, chunkFiles);
-    /* eslint-enable no-await-in-loop */
+    const filesMeta = await getFilesMetaData(config, filesChunk);
     const transformedPaths = transformPathsFromMetaData(config, filesMeta);
 
     allTransformedFiles = allTransformedFiles.concat(transformedPaths);
-  }
+  });
 
   await closeExifToolProcess();
 
