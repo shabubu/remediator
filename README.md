@@ -70,7 +70,7 @@ Finally, since this was using the default `mode` of "dry" `/unsorted/image.jpg` 
 **Default:** 20
 
 #### Format
-**Description:** Template string to use when building new filenames.<br />
+**Description:** Template string to use when building new file names.<br />
 **Key:** format<br />
 **Type:** String<br />
 **Required:** No<br />
@@ -88,7 +88,7 @@ Finally, since this was using the default `mode` of "dry" `/unsorted/image.jpg` 
 **Default:** dry
 
 #### Output directory
-**Description:** Directory to output files into after being transformed from provided format.  Must have read and write permissions to this directory.<br />
+**Description:** Base output directory for transformed files.  Must have read and write permissions to this directory.<br />
 **Key:** output<br />
 **Type:** String<br />
 **Required:** Yes
