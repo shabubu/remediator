@@ -1,5 +1,5 @@
+import { exiftool } from 'exiftool-vendored';
 import { ALL_EXIF_KEYS } from 'src/constants/metaData';
-import { getExifToolInstance } from 'src/lib/exifTool';
 
 /**
  * Fetches the exif keys for file that remediator requires.
@@ -8,8 +8,12 @@ import { getExifToolInstance } from 'src/lib/exifTool';
  * @async
  */
 export default async function getExifToolMetaData(filePath) {
-  const exifTool = await getExifToolInstance();
-  const { data } = await exifTool.readMetadata(filePath, ALL_EXIF_KEYS);
+  const returnData = {};
+  const tags = await exiftool.read(filePath, ALL_EXIF_KEYS);
 
-  return data[0];
+  ALL_EXIF_KEYS.forEach((key) => {
+    returnData[key] = tags[key];
+  });
+
+  return returnData;
 }

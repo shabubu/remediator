@@ -9,17 +9,9 @@ import {
   LIB_ORIGINAL_FILE_PATH,
   LIB_RESOLUTION_KEY,
 } from 'src/constants/metaData';
-import {
-  closeExifToolProcess,
-  openExifToolProcess,
-} from 'src/lib/exifTool';
 import getFileMetaData from 'src/lib/getFilesMetaData/getFileMetaData';
 
 describe('src/lib/getFilesMetaData/getFileMetaData', () => {
-  // setup and tear down exiftool process for test(s)
-  beforeAll(done => openExifToolProcess().then(() => done()));
-  afterAll(done => closeExifToolProcess().then(() => done()));
-
   test('should resolve object of metadata for a media file', () => {
     const config = {};
     const filePath = path.resolve('./testAssets/1.jpg');

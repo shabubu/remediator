@@ -7,17 +7,9 @@ import {
   LIB_ORIGINAL_FILE_PATH,
   LIB_RESOLUTION_KEY,
 } from 'src/constants/metaData';
-import {
-  closeExifToolProcess,
-  openExifToolProcess,
-} from 'src/lib/exifTool';
 import getFilesMetaData from 'src/lib/getFilesMetaData';
 
 describe('src/lib/getFilesMetaData integration tests', () => {
-  // setup and tear down exiftool process for test(s)
-  beforeAll(done => openExifToolProcess().then(() => done()));
-  afterAll(done => closeExifToolProcess().then(() => done()));
-
   test('should resolve expected metadata for 2 files', () => {
     const config = {};
     const files = [

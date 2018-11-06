@@ -9,7 +9,7 @@ import {
 } from 'src/constants/metaData';
 import getOldestTimestamp from 'src/lib/getFilesMetaData/getOldestTimestamp';
 
-const validExifDate = '2000:01:01 01:00:00';
+const validExifDate = '2000-01-01 01:00:00';
 const validExifTime = 946717200000;
 
 describe('src/lib/getFilesMetaData/determineOldestDate', () => {

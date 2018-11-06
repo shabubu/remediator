@@ -1,8 +1,5 @@
+import { exiftool } from 'exiftool-vendored';
 import { BATCH_SIZE_KEY } from 'src/constants';
-import {
-  closeExifToolProcess,
-  openExifToolProcess,
-} from 'src/lib/exifTool';
 import getFilesMetaData from 'src/lib/getFilesMetaData';
 import checkAndSetUniqueOutputPaths from 'src/lib/transformPaths/checkAndSetUniqueOutputPaths';
 import transformPathsFromMetaData from 'src/lib/transformPaths/transformPathsFromMetaData';
@@ -19,8 +16,6 @@ export default async function transformPaths(config, sourceFiles) {
   let allTransformedFiles = [];
   const filesChunks = chunkArray(sourceFiles, config[BATCH_SIZE_KEY]);
 
-  await openExifToolProcess();
-
   // loop synchronously over chunks to honor batch sizes
   for (let chunkKey = 0; chunkKey < filesChunks.length; chunkKey += 1) {
     const chunkFiles = filesChunks[chunkKey];
@@ -33,7 +28,7 @@ export default async function transformPaths(config, sourceFiles) {
     allTransformedFiles = allTransformedFiles.concat(transformedPaths);
   }
 
-  await closeExifToolProcess();
+  await exiftool.end();
 
   return checkAndSetUniqueOutputPaths(allTransformedFiles);
 }

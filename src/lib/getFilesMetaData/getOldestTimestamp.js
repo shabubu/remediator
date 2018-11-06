@@ -34,15 +34,8 @@ export default function getOldestTimestamp(fsDates, exifDates) {
 
   // convert exif date values into numeric and add to
   exifDateKeys.forEach((key) => {
-    const value = exifDates[key];
-
-    if (value) {
-      const pieces = value.split(' ');
-      const dateString = pieces[0].replace(':', '-');
-
-      msDates.push(
-        new Date(`${dateString} ${pieces[1]}`).getTime(),
-      );
+    if (exifDates[key]) {
+      msDates.push(new Date(exifDates[key]).getTime());
     }
   });
 
