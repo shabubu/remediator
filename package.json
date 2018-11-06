@@ -37,9 +37,8 @@
     "test:ci": "jest --config=.jestrc.json --coverage --coverageReporters=text-lcov | coveralls"
   },
   "dependencies": {
-    "dist-exiftool": "^10.53.0",
-    "mkdirp": "^0.5.1",
-    "node-exiftool": "^2.3.0"
+    "exiftool-vendored": "^7.1.0",
+    "mkdirp": "^0.5.1"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
