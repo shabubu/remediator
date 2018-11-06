@@ -1,6 +1,10 @@
 Changelog
 =========
 
+### 0.4.0 November 5, 2018
+
+* Migrated from node-exiftool and dist-exiftool to exiftool-vendored
+
 ### 0.3.0 October 17, 2018
 
 * Default mode is now dry from copy
