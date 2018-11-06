@@ -8,7 +8,7 @@ import {
   EXIF_JPG_RESOLUTION,
 } from 'src/constants/metaData';
 
-const exifDate = '2000:01:01 01:00:00';
+const exifDate = '2000-01-01 01:00:00';
 
 export default {
   [EXIF_JPG_DEVICE_MAKE_KEY]: 'A Camera Maker',
