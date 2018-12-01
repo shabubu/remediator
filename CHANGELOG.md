@@ -1,7 +1,11 @@
 Changelog
 =========
 
-### 0.4.1 December 1, 2018
+### 0.5.1 December 1, 2018
+
+* exiftool-vendored is now dev dependency
+
+### 0.5.0 December 1, 2018
 
 * exiftool-vendored is now a peer dependency
 
