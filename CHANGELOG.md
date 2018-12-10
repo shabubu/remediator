@@ -1,6 +1,11 @@
 Changelog
 =========
 
+### 0.6.0 December 10, 2018
+
+* Added new required config key "exiftool"
+* Now using config exiftool everywhere instead of direct exiftool-vendored use
+
 ### 0.5.1 December 1, 2018
 
 * exiftool-vendored is now dev dependency
