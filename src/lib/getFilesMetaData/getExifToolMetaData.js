@@ -1,4 +1,4 @@
-import { exiftool } from 'exiftool-vendored';
+import { EXIFTOOL_KEY } from 'src/constants';
 import { ALL_EXIF_KEYS } from 'src/constants/metaData';
 
 /**
@@ -7,8 +7,9 @@ import { ALL_EXIF_KEYS } from 'src/constants/metaData';
  * @returns {object}
  * @async
  */
-export default async function getExifToolMetaData(filePath) {
+export default async function getExifToolMetaData(config, filePath) {
   const returnData = {};
+  const exiftool = config[EXIFTOOL_KEY];
   const tags = await exiftool.read(filePath, ALL_EXIF_KEYS);
 
   ALL_EXIF_KEYS.forEach((key) => {

@@ -1,5 +1,7 @@
-import { exiftool } from 'exiftool-vendored';
-import { BATCH_SIZE_KEY } from 'src/constants';
+import {
+  BATCH_SIZE_KEY,
+  EXIFTOOL_KEY,
+} from 'src/constants';
 import getFilesMetaData from 'src/lib/getFilesMetaData';
 import checkAndSetUniqueOutputPaths from 'src/lib/transformPaths/checkAndSetUniqueOutputPaths';
 import transformPathsFromMetaData from 'src/lib/transformPaths/transformPathsFromMetaData';
@@ -13,6 +15,7 @@ import { chunkArray } from 'src/lib/util';
  * @resolves {Array}              Resolves array of remediator return objects.
  */
 export default async function transformPaths(config, sourceFiles) {
+  const exiftool = config[EXIFTOOL_KEY];
   let allTransformedFiles = [];
   const filesChunks = chunkArray(sourceFiles, config[BATCH_SIZE_KEY]);
 

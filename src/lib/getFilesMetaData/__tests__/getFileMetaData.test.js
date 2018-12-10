@@ -1,5 +1,9 @@
+import { exiftool } from 'exiftool-vendored';
 import path from 'path';
-import { SKIP_ERRORS_KEY } from 'src/constants/config';
+import {
+  EXIFTOOL_KEY,
+  SKIP_ERRORS_KEY,
+} from 'src/constants/config';
 import {
   LIB_DATE_KEY,
   LIB_ERROR_KEY,
@@ -13,7 +17,9 @@ import getFileMetaData from 'src/lib/getFilesMetaData/getFileMetaData';
 
 describe('src/lib/getFilesMetaData/getFileMetaData', () => {
   test('should resolve object of metadata for a media file', () => {
-    const config = {};
+    const config = {
+      [EXIFTOOL_KEY]: exiftool,
+    };
     const filePath = path.resolve('./testAssets/1.jpg');
     const expected = {
       [LIB_DATE_KEY]: new Date(946717200000),

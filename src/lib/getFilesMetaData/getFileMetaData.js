@@ -28,7 +28,7 @@ import getOldestTimestamp from 'src/lib/getFilesMetaData/getOldestTimestamp';
 export default async function getFileMetaData(config, filePath) {
   try {
     const fsMeta = await getFileSystemMetaData(filePath);
-    const exifMeta = await getExifToolMetaData(filePath);
+    const exifMeta = await getExifToolMetaData(config, filePath);
     const date = new Date(getOldestTimestamp(fsMeta, exifMeta));
 
     return {

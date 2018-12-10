@@ -1,4 +1,6 @@
+import { exiftool } from 'exiftool-vendored';
 import path from 'path';
+import { EXIFTOOL_KEY } from 'src/constants';
 import {
   LIB_DATE_KEY,
   LIB_MAKE_KEY,
@@ -11,7 +13,9 @@ import getFilesMetaData from 'src/lib/getFilesMetaData';
 
 describe('src/lib/getFilesMetaData integration tests', () => {
   test('should resolve expected metadata for 2 files', () => {
-    const config = {};
+    const config = {
+      [EXIFTOOL_KEY]: exiftool,
+    };
     const files = [
       path.resolve('./testAssets/1.jpg'),
       path.resolve('./testAssets/2.jpg'),
