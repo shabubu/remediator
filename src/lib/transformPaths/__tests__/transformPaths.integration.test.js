@@ -1,6 +1,8 @@
 import path from 'path';
+import { exiftool } from 'exiftool-vendored';
 import {
   BATCH_SIZE_KEY,
+  EXIFTOOL_KEY,
   OUTPUT_DIRECTORY_KEY,
   RECURSIVE_KEY,
   RETURN_DATA_OUTPUT_KEY,
@@ -19,6 +21,7 @@ const image3Output = path.join(imageOutputBase, '/01. January/01 Saturday/2000.0
 describe('src/lib/transformPaths integration tests', () => {
   test('should resolve objects with unique file paths in output', async () => {
     const config = await buildConfig({
+      [EXIFTOOL_KEY]: exiftool,
       [SOURCE_DIRECTORIES_KEY]: [
         './testAssets',
         './testAssets/subDir',

@@ -1,3 +1,4 @@
+import { exiftool } from 'exiftool-vendored';
 import path from 'path';
 import buildConfig from 'src/lib/buildConfig';
 import {
@@ -15,12 +16,14 @@ import {
   SKIP_ERRORS_KEY,
   DEFAULT_SKIP_ERRORS,
   DEFAULT_MODE,
+  EXIFTOOL_KEY,
 } from 'src/constants';
 
 describe('src/lib/buildConfig integration tests', () => {
   test('should return valid config with all parameters', () => {
     const validDirectory = '../';
     const options = {
+      [EXIFTOOL_KEY]: exiftool,
       [OUTPUT_DIRECTORY_KEY]: validDirectory,
       [SOURCE_DIRECTORIES_KEY]: validDirectory,
       [FORMAT_KEY]: ': Day :.:Ext:',

@@ -1,5 +1,7 @@
 import path from 'path';
+import { exiftool } from 'exiftool-vendored';
 import {
+  EXIFTOOL_KEY,
   MODE_COPY,
   MODE_KEY,
   OUTPUT_DIRECTORY_KEY,
@@ -27,6 +29,7 @@ describe('Remediator dependencies error handling integration tests', () => {
 
   test('should successfully resolve return objects but not copy/move if previous error found on object', async () => {
     const copyOptions = {
+      [EXIFTOOL_KEY]: exiftool,
       [OUTPUT_DIRECTORY_KEY]: outputDir,
       [SOURCE_DIRECTORIES_KEY]: outputDir,
       [MODE_KEY]: MODE_COPY,

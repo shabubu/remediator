@@ -1,4 +1,5 @@
 import path from 'path';
+import { exiftool } from 'exiftool-vendored';
 import {
   BATCH_SIZE_KEY,
   FORMAT_KEY,
@@ -13,6 +14,7 @@ import {
   MODE_COPY,
   MODE_MOVE,
   RETURN_DATA_ERROR_KEY,
+  EXIFTOOL_KEY,
 } from 'src/constants';
 import { MissingOptionError } from 'src/errors';
 import {
@@ -41,6 +43,7 @@ describe('Remediator integration tests', () => {
   describe('Error handling', () => {
     const outputDir = './testAssets/.hiddenDir';
     const options = {
+      [EXIFTOOL_KEY]: exiftool,
       [OUTPUT_DIRECTORY_KEY]: outputDir,
       [SOURCE_DIRECTORIES_KEY]: outputDir,
       [MODE_KEY]: MODE_COPY,
@@ -52,7 +55,7 @@ describe('Remediator integration tests', () => {
       expect.assertions(1);
       return expect(remediator())
         .rejects
-        .toEqual(new MissingOptionError(OUTPUT_DIRECTORY_KEY));
+        .toEqual(new MissingOptionError(EXIFTOOL_KEY));
     });
 
     test('should successfully resolve and add error if problem moving/copying and skipErrors is enabled', async () => {
@@ -88,6 +91,7 @@ describe('Remediator integration tests', () => {
     const sourceDir = './testAssets';
     const outputDir = './testAssets/.hiddenDir';
     const baseOptions = {
+      [EXIFTOOL_KEY]: exiftool,
       [OUTPUT_DIRECTORY_KEY]: outputDir,
       [SOURCE_DIRECTORIES_KEY]: sourceDir,
     };

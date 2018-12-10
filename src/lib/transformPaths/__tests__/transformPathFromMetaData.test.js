@@ -1,5 +1,7 @@
+import { exiftool } from 'exiftool-vendored';
 import path from 'path';
 import {
+  EXIFTOOL_KEY,
   FORMAT_KEY,
   LIB_ERROR_KEY,
   LIB_ORIGINAL_FILE_PATH,
@@ -18,6 +20,7 @@ describe('src/lib/transformPaths/transformPathFromMetaData', () => {
     const output = './';
     const source = './testAssets';
     const config = await buildConfig({
+      [EXIFTOOL_KEY]: exiftool,
       [OUTPUT_DIRECTORY_KEY]: output,
       [SOURCE_DIRECTORIES_KEY]: source,
     });
@@ -40,6 +43,7 @@ describe('src/lib/transformPaths/transformPathFromMetaData', () => {
     const output = './';
     const source = './testAssets';
     const config = await buildConfig({
+      [EXIFTOOL_KEY]: exiftool,
       [OUTPUT_DIRECTORY_KEY]: output,
       [SOURCE_DIRECTORIES_KEY]: source,
       [FORMAT_KEY]: ':-YYYY-::-Model-:.:Ext:',
@@ -63,6 +67,7 @@ describe('src/lib/transformPaths/transformPathFromMetaData', () => {
     const output = './';
     const source = './testAssets';
     const config = await buildConfig({
+      [EXIFTOOL_KEY]: exiftool,
       [OUTPUT_DIRECTORY_KEY]: output,
       [SOURCE_DIRECTORIES_KEY]: source,
     });
