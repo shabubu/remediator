@@ -1,3 +1,4 @@
+import validateExiftool from 'src/lib/buildConfig/validateKeysDataTypes/validateExiftool';
 import validateRecursive from 'src/lib/buildConfig/validateKeysDataTypes/validateRecursive';
 import validateOutputDirectory from 'src/lib/buildConfig/validateKeysDataTypes/validateOutputDirectory';
 import validateSkipErrors from 'src/lib/buildConfig/validateKeysDataTypes/validateSkipErrors';
@@ -21,6 +22,7 @@ export default function validateKeysDataTypes(config) {
   validatedConfig = validateMode(validatedConfig);
   validatedConfig = validateBatchSize(validatedConfig);
   validatedConfig = validateSkipErrors(validatedConfig);
+  validatedConfig = validateExiftool(validatedConfig);
 
   return validatedConfig;
 }

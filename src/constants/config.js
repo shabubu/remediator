@@ -50,6 +50,12 @@ export const DEFAULT_RECURSIVE = false;
 export const DEFAULT_SKIP_ERRORS = false;
 
 /**
+ * Config object key for exiftool instance.
+ * @type {string}
+ */
+export const EXIFTOOL_KEY = 'exiftool';
+
+/**
  * Config object key for filename format template.
  * @type {string}
  */

@@ -1,3 +1,4 @@
+import { exiftool } from 'exiftool-vendored';
 import path from 'path';
 import {
   BATCH_SIZE_KEY,
@@ -5,6 +6,7 @@ import {
   DEFAULT_FORMAT,
   DEFAULT_RECURSIVE,
   DEFAULT_SKIP_ERRORS,
+  EXIFTOOL_KEY,
   FORMAT_KEY,
   MODE_COPY,
   MODE_KEY,
@@ -19,6 +21,7 @@ describe('src/lib/buildConfig/validateKeysDataTypes integration tests', () => {
   test('should validate and return validated and updated config object', () => {
     const validDirectory = '../';
     const config = {
+      [EXIFTOOL_KEY]: exiftool,
       [FORMAT_KEY]: DEFAULT_FORMAT,
       [OUTPUT_DIRECTORY_KEY]: validDirectory,
       [RECURSIVE_KEY]: DEFAULT_RECURSIVE,

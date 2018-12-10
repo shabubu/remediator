@@ -1,4 +1,5 @@
 import {
+  EXIFTOOL_KEY,
   OUTPUT_DIRECTORY_KEY,
   SOURCE_DIRECTORIES_KEY,
 } from 'src/constants';
@@ -8,6 +9,7 @@ import { MissingOptionError } from 'src/errors';
  * Required keys in options
  */
 const REQUIRED_OPTIONS_KEYS = [
+  EXIFTOOL_KEY,
   OUTPUT_DIRECTORY_KEY,
   SOURCE_DIRECTORIES_KEY,
 ];
