@@ -20,9 +20,9 @@ $ npm init
 ```
 
 #### Get Remediator
-Now install the Remediator package into your application and save it as a dependency.
+Now install the Remediator and exiftool-vendored packages into your application and save them as dependencies.
 ```bash
-$ npm install remediator --save
+$ npm install exiftool-vendored remediator --save
 ```
 
 ## Usage
@@ -32,10 +32,12 @@ Remediator is a simple to use library that accepts a single options object for i
 Assuming you have a directory named `/unsorted` that contains a single file named `image.jpg` that was taken at 1:00 AM on January 1st, 2000.  The following code could be used to sort the directory using default options settings.
 
 ```javascript
+import { exiftool } from 'exiftool-vendored';
 import remediator from 'remediator';
 
 async function example() {
   const results = await remediator({
+    exiftool,
     source: [
       '/unsorted',
     ],
@@ -45,6 +47,8 @@ async function example() {
   console.log(results);
 }
 ```
+Note: In order for Exiftool to have the proper permissions a reference must be provided to remediator.<br />
+Note: First run of remediator may take slightly longer as "exiftool-vendored" will need to download the Exiftool process for the given environment.
 
 Since the we are using the default format of `:YYYY:/:MM0:. :Month:/:DD0: :Day:/:YYYY:.:MM0:.:DD0: :HH0:.:MN0:.:Ext:` the expected output from the above code would be:
 
@@ -68,6 +72,12 @@ Finally, since this was using the default `mode` of "dry" `/unsorted/image.jpg` 
 **Type:** Integer<br />
 **Required:** No<br />
 **Default:** 20
+
+#### Exiftool
+**Description:** Reference to the Exiftool process object from "exiftool-vendored".  "exiftool-vendored" will determine the appropriate exiftool binary to install and be used by Remediator.  See usage in basic example above.<br />
+**Key:** exiftool<br />
+**Type:** Object<br />
+**Required:** Yes<br />
 
 #### Format
 **Description:** Template string to use when building new file names.<br />
