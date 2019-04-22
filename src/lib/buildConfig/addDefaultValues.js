@@ -9,6 +9,8 @@ import {
   SKIP_ERRORS_KEY,
   DEFAULT_SKIP_ERRORS,
   DEFAULT_MODE,
+  GEOCODING_API_KEY_KEY,
+  DEFAULT_GEOCODING_API_KEY,
 } from 'src/constants';
 
 /**
@@ -23,6 +25,7 @@ export default function addDefaultValues(options) {
     [MODE_KEY]: DEFAULT_MODE,
     [BATCH_SIZE_KEY]: DEFAULT_BATCH_SIZE,
     [SKIP_ERRORS_KEY]: DEFAULT_SKIP_ERRORS,
+    [GEOCODING_API_KEY_KEY]: DEFAULT_GEOCODING_API_KEY,
     ...options,
   };
 }

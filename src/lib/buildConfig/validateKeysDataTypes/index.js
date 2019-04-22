@@ -1,4 +1,6 @@
 import validateExiftool from 'src/lib/buildConfig/validateKeysDataTypes/validateExiftool';
+import validateGeocodingApiKey
+  from 'src/lib/buildConfig/validateKeysDataTypes/validateGeocodingApiKey';
 import validateRecursive from 'src/lib/buildConfig/validateKeysDataTypes/validateRecursive';
 import validateOutputDirectory from 'src/lib/buildConfig/validateKeysDataTypes/validateOutputDirectory';
 import validateSkipErrors from 'src/lib/buildConfig/validateKeysDataTypes/validateSkipErrors';
@@ -23,6 +25,7 @@ export default function validateKeysDataTypes(config) {
   validatedConfig = validateBatchSize(validatedConfig);
   validatedConfig = validateSkipErrors(validatedConfig);
   validatedConfig = validateExiftool(validatedConfig);
+  validatedConfig = validateGeocodingApiKey(validatedConfig);
 
   return validatedConfig;
 }

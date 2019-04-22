@@ -4,10 +4,12 @@ import {
   BATCH_SIZE_KEY,
   DEFAULT_BATCH_SIZE,
   DEFAULT_FORMAT,
+  DEFAULT_GEOCODING_API_KEY,
   DEFAULT_RECURSIVE,
   DEFAULT_SKIP_ERRORS,
   EXIFTOOL_KEY,
   FORMAT_KEY,
+  GEOCODING_API_KEY_KEY,
   MODE_COPY,
   MODE_KEY,
   OUTPUT_DIRECTORY_KEY,
@@ -29,6 +31,7 @@ describe('src/lib/buildConfig/validateKeysDataTypes integration tests', () => {
       [MODE_KEY]: MODE_COPY,
       [BATCH_SIZE_KEY]: DEFAULT_BATCH_SIZE,
       [SKIP_ERRORS_KEY]: DEFAULT_SKIP_ERRORS,
+      [GEOCODING_API_KEY_KEY]: DEFAULT_GEOCODING_API_KEY,
     };
     const expected = {
       ...config,

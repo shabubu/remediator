@@ -13,6 +13,8 @@ import {
   SKIP_ERRORS_KEY,
   DEFAULT_SKIP_ERRORS,
   DEFAULT_MODE,
+  GEOCODING_API_KEY_KEY,
+  DEFAULT_GEOCODING_API_KEY,
 } from 'src/constants';
 
 describe('src/lib/buildConfig/addDefaultValues', () => {
@@ -28,6 +30,7 @@ describe('src/lib/buildConfig/addDefaultValues', () => {
       [MODE_KEY]: DEFAULT_MODE,
       [BATCH_SIZE_KEY]: DEFAULT_BATCH_SIZE,
       [SKIP_ERRORS_KEY]: DEFAULT_SKIP_ERRORS,
+      [GEOCODING_API_KEY_KEY]: DEFAULT_GEOCODING_API_KEY,
     };
     const result = addDefaultValues(options);
 
@@ -44,6 +47,7 @@ describe('src/lib/buildConfig/addDefaultValues', () => {
       [MODE_KEY]: MODE_DRY,
       [BATCH_SIZE_KEY]: 25,
       [SKIP_ERRORS_KEY]: true,
+      [GEOCODING_API_KEY_KEY]: 'api_key',
     };
     const result = addDefaultValues(options);
 

@@ -17,6 +17,8 @@ import {
   DEFAULT_SKIP_ERRORS,
   DEFAULT_MODE,
   EXIFTOOL_KEY,
+  GEOCODING_API_KEY_KEY,
+  DEFAULT_GEOCODING_API_KEY,
 } from 'src/constants';
 
 describe('src/lib/buildConfig integration tests', () => {
@@ -38,6 +40,7 @@ describe('src/lib/buildConfig integration tests', () => {
       [MODE_KEY]: DEFAULT_MODE,
       [BATCH_SIZE_KEY]: DEFAULT_BATCH_SIZE,
       [SKIP_ERRORS_KEY]: DEFAULT_SKIP_ERRORS,
+      [GEOCODING_API_KEY_KEY]: DEFAULT_GEOCODING_API_KEY,
       [TRANSFORMER_ACTIONS_KEY]: [
         {
           [TRANSFORMER_NAME_KEY]: 'Day',
