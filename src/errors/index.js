@@ -5,3 +5,4 @@ export { default as MissingFormatSeparatorError } from 'src/errors/MissingFormat
 export { default as TransformerMissingError } from 'src/errors/TransformerMissingError';
 export { default as InvalidModeError } from 'src/errors/InvalidModeError';
 export { default as InvalidBatchSizeError } from 'src/errors/InvalidBatchSizeError';
+export { default as DMSToDDConversionFailure } from 'src/errors/DMSToDDConversionFailure';
